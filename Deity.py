@@ -22,3 +22,10 @@ class Write_JSON:
 		obj = self.deity.to_JSON()
 		with open('data.json', 'a') as f:
 			f.write(obj)
+
+if __name__=='__main__':#testing purposes
+	testGod = Deity("Fyodor Pavlovich Karamazov", "http//:Russia")
+	testGod.generation = 1
+	testGod.typie = "Sensualist"
+	testGod.attribute = "Money"
+	print testGod.to_JSON()
