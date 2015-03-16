@@ -15,4 +15,11 @@ class Deity:
 	def getName(self):
 		return self.name
 
-
+class Write_JSON:
+	def __init__(self, deity):
+		self.deity = deity
+	def write(self):
+		obj = self.deity.to_JSON()
+		f = open('data.json', 'a')
+		with open('data.json', 'a') as f:
+			f.write(obj)
