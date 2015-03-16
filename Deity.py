@@ -20,6 +20,5 @@ class Write_JSON:
 		self.deity = deity
 	def write(self):
 		obj = self.deity.to_JSON()
-		f = open('data.json', 'a')
 		with open('data.json', 'a') as f:
 			f.write(obj)
