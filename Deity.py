@@ -14,7 +14,6 @@ class Deity:
 	children = []
 	def getName(self):
 		return self.name
-
 class Write_JSON:
 	def __init__(self, deity):
 		self.deity = deity

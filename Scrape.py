@@ -18,33 +18,47 @@ class Scrape:
 		self.tables = self.soup.findAll("table", {"class" : "wikitable"}) #Grabs the 3 wiki tables: Titans, 12 Gods and Primordial
 		#print type(soup)
 		print "Connection Success"
-	def extract12Gods(self):
+	def extractWikiTables(self,x): #specify which wiki table to get
 		objlist = []
-		for td in self.tables[0]:
-			soupa = BeautifulSoup(unicode(td))	
-			#list12 =  soupa.findAll("b")
-			#print soupa.findAll("a")
-		  	for i in (soupa.select("td > b > a")):
-		    		#print(i.get('href'))
-		    		#print(i.get('title'))
-		    		#print i
-		    		link = self.mainUrl + i.get('href')
-		    		#print link
-		    		name = i.get('title')
-		    		god = Deity(name,link)
-		    		god.generation ="Olympian"
-		    		god.typie = "Olympian"
-		    		objlist.append(god)
-			print(soupa.select("p"))
-			#print "------------------------"
-		return objlist  #returns list of 12 Olympian gods to main
-
-#	def twelveGod(self):
-	def extractWikiTables(self):
-		print self.tables[1]	
+		#print self.tables[]
+		for td in self.tables[x]:
+			soupb = BeautifulSoup(unicode(td))
+			searching = "td > a"
+			if x == 0:
+				searching = "td > b > a"
+			for i in (soupb.select(searching)):
+				link = self.mainUrl + i.get('href')
+				name = i.get('title')
+				if name.find("(")!= -1: #parse out (mythology) substring
+					name = name[0:name.index("(")]
+				#print name
+				god = Deity(name,link)
+				gen = ""
+				ty = ""
+				if x == 0:
+					gen = "Olympian"
+					ty = "Immortal"
+				elif x == 1:
+					gen = "Primordial"
+					ty = "Primeval"
+				elif x == 2:
+					gen = "Titan"
+					ty = "Immortal"
+				else:
+					gen = ""
+				god.generation = gen
+				god.typie = ty
+				objlist.append(god)
+			#list2 = (soupb.select("td"))
+			#if(len(list2)>0):     ######Grabs the paragraph blurb
+			#	print list2[2]
+		return objlist
 
 if __name__=='__main__':#testing purposes
 	scraper = Scrape()
-	testList1 = scraper.extract12Gods()
-	for i in testList1:
-		print i.getName()
+	#testList1 = scraper.extract12Gods()
+	lis = [0,1,2]
+	for i in lis:
+		testList1 = scraper.extractWikiTables(i)
+		for i in testList1:
+			print i.getName() + " " + i.generation
