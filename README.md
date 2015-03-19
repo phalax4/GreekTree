@@ -1,3 +1,3 @@
 # GreekTree
-Relationships of the Greek Theogany
+Relationships of the Greek Theogony
 Begin
