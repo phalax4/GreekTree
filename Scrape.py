@@ -56,9 +56,8 @@ class Scrape:
 		return objlist
 	def extractWikiLists(self, x): #getting names of giants and personified concepts
 		objlist = []
-		searching = "ul > li"
 		soupb = BeautifulSoup(unicode(self.lists[x]))
-		for i in (soupb.select(searching)):
+		for i in (soupb.select("li")):
 			thing = i.find("a")
 			if thing != None:
 				link = self.mainUrl + thing.get('href')
