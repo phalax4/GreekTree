@@ -85,7 +85,7 @@ if __name__=='__main__':#testing purposes
 		testList1 = scraper.extractWikiTables(i)
 		for i in testList1:
 			print i.getName() + " " + i.generation
-		for i in [0,1]:
-			testList2 = scraper.extractWikiLists(i)
-			for i in testList2:
-				print i.getName() + " " + i.typie
+	for i in [0,1]:
+		testList2 = scraper.extractWikiLists(i)
+		for i in testList2:
+			print i.getName() + " " + i.typie
