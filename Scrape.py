@@ -54,27 +54,41 @@ class Scrape:
 			#if(len(list2)>0):     ######Grabs the paragraph blurb
 			#	print list2[2]
 		return objlist
+	
+	def createDeityObject(self, i, a):
+		if a != None:
+			link = self.mainUrl + a.get('href')
+			name = a.text.encode('utf-8')
+		else: #if there is no link
+			link = ""
+			name = i.text.encode('utf-8').split(" ")[0]
+		god = Deity(name,link)
+		return god
+	
 	def extractWikiLists(self, x): #getting names of giants and personified concepts
 		objlist = []
 		soupb = BeautifulSoup(unicode(self.lists[x]))
-		for i in (soupb.select("li")):
-			thing = i.find("a")
-			if thing != None:
-				link = self.mainUrl + thing.get('href')
-				name = thing.text.encode('utf-8')
-			else: #if there is no link
-				link = ""
-				name = i.text.encode('utf-8').split(" ")[0]
-			gen = ""
-			ty = ""
-			if x == 0:
-				ty = "Giant"
-			elif x == 1:
-				ty = "Personified Concept"
-			god = Deity(name,link)
-			god.generation = gen
-			god.typie = ty
-			objlist.append(god)
+		for ul in soupb.find("div").find_all("ul",recursive=False):
+			for i in (ul.find_all("li", recursive=False)):
+				a = i.find("a")
+				god = self.createDeityObject(i, a)
+				gen = -1
+				ty = ""
+				if x == 0:
+					ty = "Giant"
+				elif x == 1:
+					ty = "Spirit"
+				god.generation = gen
+				god.typie = ty
+				objlist.append(god)
+
+				ull = i.find("ul")
+				if ull:
+					for s in ull.find_all("li",recursive=False):
+						subgod = self.createDeityObject(s, s.find("a"))
+						subgod.generation = god.generation
+						subgod.typie = "something"
+						god.sub += [subgod]
 		return objlist
 
 if __name__=='__main__':#testing purposes
