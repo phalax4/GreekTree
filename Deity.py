@@ -6,35 +6,50 @@ class Deity:
 	def __init__(self,name,link):
 		self.name = name
 		self.link = link
-	generation = ""
+		self.group = -1
+		self.parents = []
+		self.siblings = []
+		self.children = []
+		self.sub = []
 	typie = ""
 	attribute = ""
-	parent = []
-	siblings = []
-	children = []
+
 	def getName(self):
 		return self.name
+
+class JSON_data:
+	def __init__(self, nodes, links):
+		self.nodes = nodes
+		self.links = links
+		
 class Write_JSON:
-	def __init__(self, deity):
-		self.deity = deity
+	def __init__(self, obj):
+		self.obj = obj
 	def write(self):
-		obj = self.deity#.to_JSON()
+		obj = json.dumps(self.obj,default=jdefault,indent=4,separators = (',',':'))
 		with open('data.json', 'a') as f:
 			f.write(obj)
 
+# allows Python lists to be JSON encoded
+def jdefault(o):
+    if isinstance(o, set):
+        return list(o)
+    return o.__dict__
+
 if __name__=='__main__':#testing purposes
 	testGod = Deity("Fyodor Pavlovich Karamazov", "http//:Russia")
-	testGod.generation = 1
+	testGod.group = 1
 	testGod.typie = "Sensualist"
 	testGod.attribute = "Money"
 	print testGod.to_JSON()
 	testGod2 = Deity("Alexei Fydorovich Karamazov","http//:Russia")
-	testGod.generation = 2
+	testGod.group = 2
 	testGod.typie = "Faithful"
 	testGod.attribute = "Religion"
 	objlist = [testGod,testGod2]
-	s = json.dumps([g.__dict__ for g in objlist],indent=4,separators = (',',':'))
-	print s
+
+	links = []
+	s = JSON_data(objlist, links)
 	writer = Write_JSON(s)
 	writer.write()
 	#for i in objlist:
