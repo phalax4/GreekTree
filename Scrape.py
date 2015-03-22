@@ -34,20 +34,19 @@ class Scrape:
 					name = name[0:name.index("(")]
 				#print name
 				god = Deity(name,link)
-				gen = ""
 				ty = ""
 				if x == 0:
-					gen = "Olympian"
+					gen = 2
 					ty = "Immortal"
 				elif x == 1:
-					gen = "Primordial"
+					gen = 0
 					ty = "Primeval"
 				elif x == 2:
-					gen = "Titan"
+					gen = 1
 					ty = "Immortal"
 				else:
-					gen = ""
-				god.generation = gen
+					gen = -1
+				god.group = gen
 				god.typie = ty
 				objlist.append(god)
 			#list2 = (soupb.select("td"))
@@ -78,7 +77,7 @@ class Scrape:
 					ty = "Giant"
 				elif x == 1:
 					ty = "Spirit"
-				god.generation = gen
+				god.group = gen
 				god.typie = ty
 				objlist.append(god)
 
@@ -86,7 +85,7 @@ class Scrape:
 				if ull:
 					for s in ull.find_all("li",recursive=False):
 						subgod = self.createDeityObject(s, s.find("a"))
-						subgod.generation = god.generation
+						subgod.group = god.group
 						subgod.typie = "something"
 						god.sub += [subgod]
 		return objlist
@@ -98,7 +97,7 @@ if __name__=='__main__':#testing purposes
 	for i in lis:
 		testList1 = scraper.extractWikiTables(i)
 		for i in testList1:
-			print i.getName() + " " + i.generation
+			print i.getName() + " " + i.group
 	for i in [0,1]:
 		testList2 = scraper.extractWikiLists(i)
 		for i in testList2:
