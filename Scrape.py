@@ -1,13 +1,14 @@
 #!/usr/bin/python
 import urllib2
-from bs4 import BeautifulSoup
-from Deity import Deity
+from bs4 import BeautifulSoup, NavigableString
+from Deity import *
 class Scrape:
 	def __init__(self):
 		self.url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures")
 		self.content = self.url.read()
 		self.soup =  BeautifulSoup(self.content)
 		self.tables = [] #table holder for 3 wikitables
+		self.lists = []
 		self.mainUrl = "http://en.wikipedia.org"  #Seems like everything has this as prefix for link
 		#### Add more attributes for other "segements" of the page
 		self.connect() #connects to the list of myth figures web page
@@ -24,31 +25,34 @@ class Scrape:
 		#print self.tables[]
 		for td in self.tables[x]:
 			soupb = BeautifulSoup(unicode(td))
-			searching = "td > a"
+			a = soupb.find("a")
 			if x == 0:
-				searching = "td > b > a"
-			for i in (soupb.select(searching)):
-				link = self.mainUrl + i.get('href')
-				name = i.get('title')
+				b = soupb.find("b")
+				if b: a = b.find("a")
+			if a:
+				link = self.mainUrl + a.get('href')
+				name = a.get('title')
 				if name.find("(")!= -1: #parse out (mythology) substring
 					name = name[0:name.index("(")]
-				#print name
 				god = Deity(name,link)
-				ty = ""
 				if x == 0:
-					gen = 2
+					group = 2
 					ty = "Immortal"
 				elif x == 1:
-					gen = 0
+					group = 0
 					ty = "Primeval"
 				elif x == 2:
-					gen = 1
+					group = 1
 					ty = "Immortal"
 				else:
-					gen = -1
-				god.group = gen
+					group = -1
+					ty = ""
+				god.group = group
 				god.typie = ty
-				objlist.append(god)
+				#s = ScrapeDeity(god, god.link)
+				#s.extractInfobox()
+				if god not in objlist:
+					objlist.append(god)
 			#list2 = (soupb.select("td"))
 			#if(len(list2)>0):     ######Grabs the paragraph blurb
 			#	print list2[2]
@@ -79,16 +83,52 @@ class Scrape:
 					ty = "Spirit"
 				god.group = gen
 				god.typie = ty
+				#s = ScrapeDeity(god, god.link)
+				#s.extractInfobox()
 				objlist.append(god)
 
 				ull = i.find("ul")
 				if ull:
 					for s in ull.find_all("li",recursive=False):
-						subgod = self.createDeityObject(s, s.find("a"))
-						subgod.group = god.group
-						subgod.typie = "something"
-						god.sub += [subgod]
+						suba = s.find("a", recursive=False)
+						if suba != None:
+							subname = suba.text.encode('utf-8')
+						else:
+							subname = s.text.encode('utf-8').split(" ")[0]
+						god.sub += [subname]
 		return objlist
+
+class ScrapeDeity:
+	def __init__(self, deity, link):
+		self.url = urllib2.urlopen(link)
+		self.content = self.url.read()
+		self.soup = BeautifulSoup(self.content)
+		self.deity = deity
+
+	@staticmethod
+	def isWord(x):
+		if len(x) >= 1:
+			if (ord(x[0]) >= 64 and ord(x[0]) <= 90) or (ord(x[0]) >= 97 and ord(x[0]) <= 122): 
+				if ("and" not in x) and ("the" not in x) and ("None" not in x):
+					return True
+		return False
+
+	def extractInfobox(self):
+		infobox = self.soup.find("table", {"class" : "infobox"})
+		if infobox:
+			for tr in infobox.select("tr"):
+				th = tr.find("th")
+				if th:
+					category = th.text.encode('utf-8')
+					if category == "Children":
+						td = tr.find("td")
+						for thing in td.children:
+							if type(thing) == NavigableString:
+								lst = thing.split(", ")
+								self.deity.children += [x for x in lst if self.isWord(x)]
+							else:
+								if self.isWord(thing.text):
+									self.deity.children += [thing.text]
 
 if __name__=='__main__':#testing purposes
 	scraper = Scrape()
