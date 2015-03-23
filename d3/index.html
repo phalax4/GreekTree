@@ -104,8 +104,10 @@
 			};
 
 			function node_size(gr) {
-				if (gr == -1) { return 1; }
-				return 4 * gr;
+				if (gr <= 0) {
+					return 3;
+				}
+				return 2 * gr + 3;
 			};
 
 			function node_color(type) {
