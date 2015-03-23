@@ -19,25 +19,6 @@ class Deity:
 	def __eq__(self, other): #for searching through the list
 		return self.link == other.link
 
-class JSON_data:
-	def __init__(self, nodes, links):
-		self.nodes = nodes
-		self.links = links
-		
-class Write_JSON:
-	def __init__(self, obj):
-		self.obj = obj
-	def write(self):
-		obj = json.dumps(self.obj,default=jdefault,indent=4,separators = (',',':'))
-		with open('data.json', 'a') as f:
-			f.write(obj)
-
-# allows Python lists to be JSON encoded
-def jdefault(o):
-    if isinstance(o, set):
-        return list(o)
-    return o.__dict__
-
 if __name__=='__main__':#testing purposes
 	testGod = Deity("Fyodor Pavlovich Karamazov", "http//:Russia")
 	testGod.group = 1
@@ -49,9 +30,4 @@ if __name__=='__main__':#testing purposes
 	testGod.typie = "Faithful"
 	testGod.attribute = "Religion"
 	objlist = [testGod,testGod2]
-
-	links = []
-	s = JSON_data(objlist, links)
-	writer = Write_JSON(s)
-	writer.write()
 
