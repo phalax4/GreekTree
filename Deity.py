@@ -16,6 +16,8 @@ class Deity:
 
 	def getName(self):
 		return self.name
+	def __eq__(self, other): #for searching through the list
+		return self.link == other.link
 
 class JSON_data:
 	def __init__(self, nodes, links):
@@ -52,8 +54,4 @@ if __name__=='__main__':#testing purposes
 	s = JSON_data(objlist, links)
 	writer = Write_JSON(s)
 	writer.write()
-	#for i in objlist:
-	#	writer = Write_JSON(i)
-	#	writer.write()
-
 
