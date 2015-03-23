@@ -4,12 +4,10 @@
   <meta charset="utf-8">
   <style>
    circle.node {
-    fill: #333;
     stroke: none;
     opacity: 0.7;
    }
    line.link {
-    stroke-width: 1px;
     stroke-opacity: 0.6;
    }
    .label {
@@ -25,8 +23,10 @@
  
  <body>
   <script>
-   var width = window.innerWidth;
-   var height = window.innerHeight;
+   var w = window.innerWidth;
+			var h = window.innerHeight;
+			var width = 1200
+			var height = 1200
    
    var svg = d3.select("body")
     .append("svg")
@@ -55,10 +55,12 @@
      .enter()
      .append("line")
      .attr("stroke", function(d) { return link_color(d.value); })
+     .attr("stroke-width", function(d) { return link_width(d.value); })
      .attr("class", "link");
     
     node.append("circle")
-     .attr("r", 8)
+     .attr("r", function(d) { return node_size(d.group); })
+     .attr("fill", function(d) { return node_color(d.typie); })
      .attr("class", "node");
      
     node.append("text")
@@ -83,15 +85,38 @@
    });
    
    function link_color(c) {
-    case(c) {
-     case 1:
-      return "red";
-     case 2:
-      return "blue";
-     default:
-      return "#000";
-    }
-   };
+				switch(c) {
+					case 1:
+						return "red";
+					case 2:
+						return "blue";
+					default:
+						return "#000";
+				}
+		 };
+		 function link_width(c) {
+				switch(c) {
+					case 1: /* children */ 
+						return 1;
+					default:
+						return 1;
+				}
+			};
+
+			function node_size(gr) {
+				if (gr == -1) { return 1; }
+				return 4 * gr;
+			};
+
+			function node_color(type) {
+				switch(type) {
+					case "Immortal":
+						return "#ccc";
+					default:
+						return "#333";
+				}
+			};
+		 
   </script>
  </body>
 </html>
