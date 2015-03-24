@@ -49,8 +49,8 @@ class Scrape:
 					ty = ""
 				god.group = group
 				god.typie = ty
-				#s = ScrapeDeity(god, god.link)
-				#s.extractInfobox()
+				s = ScrapeDeity(god, god.link)
+				s.extractInfobox()
 				if god not in objlist:
 					objlist.append(god)
 			#list2 = (soupb.select("td"))
