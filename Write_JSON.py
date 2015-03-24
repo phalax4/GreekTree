@@ -1,7 +1,7 @@
 import json
 from Deity import *
 from Link import *
-
+from Scrape import Scrape
 
 class JSON_data:
 	def __init__(self, nodes, links):
@@ -26,7 +26,7 @@ def jdefault(o):
 if __name__=='__main__':
 	scraper = Scrape()
 	objlist = []
-	for i in [0,2]:
+	for i in [0,1,2]:
 		objlist += scraper.extractWikiTables(i)
 	m = MakeLinks(objlist)
 	m.makeLinks()

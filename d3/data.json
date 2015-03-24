@@ -94,9 +94,7 @@
                 "Arion",
                 "Plutus",
                 "Philomelus",
-                "Eubuleus",
-                "Chrysothemis",
-                "Amphitheus I"
+                "Eubuleus"
             ],
             "sub":[]
         },
@@ -136,8 +134,7 @@
                 "Eucleia",
                 "Eupheme",
                 "Philophrosyne",
-                "Cabeiri",
-                "Euthenia"
+                "Cabeiri"
             ],
             "sub":[]
         },
@@ -213,7 +210,6 @@
             "children":[
                 "Aeacus",
                 "Ares",
-                "Athena",
                 "Apollo",
                 "Artemis",
                 "Aphrodite",
@@ -226,9 +222,7 @@
                 "Hephaestus",
                 "Perseus",
                 "Minos",
-                "the ",
                 "Muses",
-                "the ",
                 "Graces"
             ],
             "sub":[]
@@ -352,7 +346,6 @@
             "children":[
                 "Uranus",
                 "Pontus",
-                "the ",
                 "Ourea",
                 "Hecatonchires",
                 "Cyclopes",
@@ -448,20 +441,15 @@
             "siblings":[],
             "typie":"Primeval",
             "children":[
-                "Aether",
                 "Hemera",
                 "Moros",
                 "Apate",
                 "Nemesis",
-                "the ",
                 "Keres",
-                "the ",
                 "Moirai",
-                "the ",
                 "Hesperides",
                 "Oizys",
                 "Momus",
-                "the ",
                 "Oneiroi",
                 "Hypnos",
                 "Thanatos",
@@ -729,7 +717,6 @@
             "typie":"Immortal",
             "children":[
                 "Fifty daughters to Endymion; ",
-                "Pandia",
                 "Ersa"
             ],
             "sub":[]
@@ -874,174 +861,235 @@
     ],
     "links":[
         {
+            "parent":"Aphrodite",
             "source":0,
             "target":19,
-            "value":1
+            "value":1,
+            "child":"Eros"
         },
         {
+            "parent":"Ares",
             "source":2,
             "target":19,
-            "value":1
+            "value":1,
+            "child":"Eros"
         },
         {
+            "parent":"Hera",
             "source":9,
             "target":2,
-            "value":1
+            "value":1,
+            "child":"Ares"
         },
         {
+            "parent":"Hera",
             "source":9,
             "target":8,
-            "value":1
+            "value":1,
+            "child":"Hephaestus"
         },
         {
+            "parent":"Zeus",
             "source":13,
             "target":2,
-            "value":1
+            "value":1,
+            "child":"Ares"
         },
         {
-            "source":13,
-            "target":4,
-            "value":1
-        },
-        {
+            "parent":"Zeus",
             "source":13,
             "target":1,
-            "value":1
+            "value":1,
+            "child":"Apollo"
         },
         {
+            "parent":"Zeus",
             "source":13,
             "target":3,
-            "value":1
+            "value":1,
+            "child":"Artemis"
         },
         {
+            "parent":"Zeus",
             "source":13,
             "target":0,
-            "value":1
+            "value":1,
+            "child":"Aphrodite"
         },
         {
+            "parent":"Zeus",
             "source":13,
             "target":6,
-            "value":1
+            "value":1,
+            "child":"Dionysus"
         },
         {
+            "parent":"Zeus",
             "source":13,
             "target":10,
-            "value":1
+            "value":1,
+            "child":"Hermes"
         },
         {
+            "parent":"Zeus",
             "source":13,
             "target":8,
-            "value":1
+            "value":1,
+            "child":"Hephaestus"
         },
         {
+            "parent":"Uranus ",
             "source":22,
             "target":0,
-            "value":1
+            "value":1,
+            "child":"Aphrodite"
         },
         {
+            "parent":"Gaia ",
             "source":23,
             "target":24,
-            "value":1
+            "value":1,
+            "child":"Ourea"
         },
         {
+            "parent":"Nyx ",
             "source":31,
             "target":30,
-            "value":1
+            "value":1,
+            "child":"Hemera"
         },
         {
+            "parent":"Nyx ",
             "source":31,
             "target":20,
-            "value":1
+            "value":1,
+            "child":"Hypnos"
         },
         {
+            "parent":"Nyx ",
             "source":31,
             "target":29,
-            "value":1
+            "value":1,
+            "child":"Thanatos"
         },
         {
+            "parent":"Cronus",
             "source":35,
             "target":13,
-            "value":1
+            "value":1,
+            "child":"Zeus"
         },
         {
+            "parent":"Cronus",
             "source":35,
             "target":9,
-            "value":1
+            "value":1,
+            "child":"Hera"
         },
         {
+            "parent":"Cronus",
             "source":35,
             "target":12,
-            "value":1
+            "value":1,
+            "child":"Poseidon"
         },
         {
+            "parent":"Cronus",
             "source":35,
             "target":7,
-            "value":1
+            "value":1,
+            "child":"Hades"
         },
         {
+            "parent":"Cronus",
             "source":35,
             "target":11,
-            "value":1
+            "value":1,
+            "child":"Hestia"
         },
         {
+            "parent":"Cronus",
             "source":35,
             "target":5,
-            "value":1
+            "value":1,
+            "child":"Demeter"
         },
         {
+            "parent":"Rhea ",
             "source":41,
             "target":12,
-            "value":1
+            "value":1,
+            "child":"Poseidon"
         },
         {
+            "parent":"Rhea ",
             "source":41,
             "target":7,
-            "value":1
+            "value":1,
+            "child":"Hades"
         },
         {
+            "parent":"Rhea ",
             "source":41,
             "target":5,
-            "value":1
+            "value":1,
+            "child":"Demeter"
         },
         {
+            "parent":"Rhea ",
             "source":41,
             "target":11,
-            "value":1
+            "value":1,
+            "child":"Hestia"
         },
         {
+            "parent":"Rhea ",
             "source":41,
             "target":9,
-            "value":1
+            "value":1,
+            "child":"Hera"
         },
         {
+            "parent":"Rhea ",
             "source":41,
             "target":13,
-            "value":1
+            "value":1,
+            "child":"Zeus"
         },
         {
+            "parent":"Theia",
             "source":43,
             "target":51,
-            "value":1
+            "value":1,
+            "child":"Helios"
         },
         {
+            "parent":"Theia",
             "source":43,
             "target":53,
-            "value":1
+            "value":1,
+            "child":"Eos"
         },
         {
+            "parent":"Theia",
             "source":43,
             "target":52,
-            "value":1
+            "value":1,
+            "child":"Selene"
         },
         {
+            "parent":"Leto",
             "source":58,
             "target":1,
-            "value":1
+            "value":1,
+            "child":"Apollo"
         },
         {
+            "parent":"Leto",
             "source":58,
             "target":3,
-            "value":1
+            "value":1,
+            "child":"Artemis"
         }
     ]
 }
