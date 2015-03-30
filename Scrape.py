@@ -20,8 +20,7 @@ class Scrape:
 		self.lists = self.soup.findAll("div", {"class": "div-col columns column-count column-count-"})
 		#print type(soup)
 		print "Connection Success"
-	def extractWikiTables(self,x): #specify which wiki table to get
-		objlist = []
+	def extractWikiTables(self,x,objlist): #specify which wiki table to get
 		#print self.tables[]
 		for td in self.tables[x]:
 			soupb = BeautifulSoup(unicode(td))
@@ -36,56 +35,59 @@ class Scrape:
 					name = name[0:name.index("(")]
 				god = Deity(name,link)
 				if x == 0:
-					group = 2
 					ty = "Immortal"
 				elif x == 1:
-					group = 0
 					ty = "Primeval"
 				elif x == 2:
 					group = 1
 					ty = "Immortal"
 				else:
-					group = -1
 					ty = ""
-				god.group = group
 				god.typie = ty
-				s = ScrapeDeity(god, god.link)
-				s.extractInfobox()
-				if god not in objlist:
+				if not self.find(god.name, objlist):
+					#going into the deity's webpage
+					if god.link:
+						s = ScrapeDeity(self, god, god.link)
+						print god.link
+						s.extractInfobox()
 					objlist.append(god)
 			#list2 = (soupb.select("td"))
 			#if(len(list2)>0):     ######Grabs the paragraph blurb
 			#	print list2[2]
-		return objlist
-	
-	def createDeityObject(self, i, a):
+
+	def createDeityObject(self, li, a):
 		if a != None:
 			link = self.mainUrl + a.get('href')
 			name = a.text.encode('utf-8')
 		else: #if there is no link
 			link = ""
-			name = i.text.encode('utf-8').split(" ")[0]
+			name = li.text.encode('utf-8').split(" ")[0]
+			if name.find(",")!= -1: #parse out (mythology) substring
+					name = name[0:(name.index(",")-1)]
 		god = Deity(name,link)
 		return god
 	
-	def extractWikiLists(self, x): #getting names of giants and personified concepts
-		objlist = []
+	def extractWikiLists(self, x, objlist): #getting names of giants and personified concepts
 		soupb = BeautifulSoup(unicode(self.lists[x]))
 		for ul in soupb.find("div").find_all("ul",recursive=False):
-			for i in (ul.find_all("li", recursive=False)):
-				a = i.find("a")
-				god = self.createDeityObject(i, a)
-				gen = -1
+			for li in (ul.find_all("li", recursive=False)):
+				a = li.find("a")
+				god = self.createDeityObject(li, a)
 				ty = ""
 				if x == 0:
 					ty = "Giant"
 				elif x == 1:
 					ty = "Spirit"
-				god.group = gen
 				god.typie = ty
-				#s = ScrapeDeity(god, god.link)
-				#s.extractInfobox()
-				objlist.append(god)
+				s = ScrapeDeity(god, god.link)
+				s.extractInfobox()
+				if not self.find(god.name, objlist):
+					#going into the deity's webpage:
+					if god.link:
+						s = ScrapeDeity(self, god, god.link)
+						print god.link
+						s.extractInfobox()
+					objlist.append(god)
 
 				ull = i.find("ul")
 				if ull:
@@ -96,7 +98,6 @@ class Scrape:
 						else:
 							subname = s.text.encode('utf-8').split(" ")[0]
 						god.sub += [subname]
-		return objlist
 
 class ScrapeDeity:
 	def __init__(self, deity, link):
@@ -109,9 +110,20 @@ class ScrapeDeity:
 	def isWord(x):
 		if len(x) >= 1:
 			if (ord(x[0]) >= 64 and ord(x[0]) <= 90) or (ord(x[0]) >= 97 and ord(x[0]) <= 122): 
-				if ("and" not in x) and ("the" not in x) and ("None" not in x):
+				if ("and " not in x) and ("the " not in x) and (" the" not in x) and (" or" not in x) and ("None" not in x):
 					return True
 		return False
+
+	def extractInfoboxList(self, tr, attribute):
+		td = tr.find("td")
+		for thing in td.children:
+			if type(thing) == NavigableString:
+				lst = thing.split(", ")
+				self.deity.__dict__[attribute] += [x for x in lst if self.isWord(x)]
+			else:
+				text = thing.text.encode('utf-8')
+				if self.isWord(text):
+					self.deity.__dict__[attribute] += [text]
 
 	def extractInfobox(self):
 		infobox = self.soup.find("table", {"class" : "infobox"})
@@ -121,14 +133,9 @@ class ScrapeDeity:
 				if th:
 					category = th.text.encode('utf-8')
 					if category == "Children":
-						td = tr.find("td")
-						for thing in td.children:
-							if type(thing) == NavigableString:
-								lst = thing.split(", ")
-								self.deity.children += [x for x in lst if self.isWord(x)]
-							else:
-								if self.isWord(thing.text):
-									self.deity.children += [thing.text]
+						self.extractInfoboxList(tr, "children")
+					if category == "Parents":
+						self.extractInfoboxList(tr, "parents")
 
 if __name__=='__main__':#testing purposes
 	scraper = Scrape()
