@@ -27,7 +27,9 @@ if __name__=='__main__':
 	scraper = Scrape()
 	objlist = []
 	for i in [0,1,2]:
-		objlist += scraper.extractWikiTables(i)
+		scraper.extractWikiTables(i,objlist)
+	for i in list(range(7)):
+		scraper.extractWikiLists(i,objlist)
 	m = MakeLinks(objlist)
 	m.makeLinks()
 
