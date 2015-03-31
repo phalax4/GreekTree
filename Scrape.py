@@ -20,6 +20,13 @@ class Scrape:
 		self.lists = self.soup.findAll("div", {"class": "div-col columns column-count column-count-"})
 		#print type(soup)
 		print "Connection Success"
+		
+	def find(self, name, objlist):
+		for god in objlist:
+			if god.name == name:
+				return True
+		return False
+
 	def extractWikiTables(self,x,objlist): #specify which wiki table to get
 		#print self.tables[]
 		for td in self.tables[x]:
@@ -62,6 +69,7 @@ class Scrape:
 				else:
 					attribute = "NULL"
 				god.attribute = attribute
+				#checking if it is already in the list
 				if not self.find(god.name, objlist):
 					#going into the deity's webpage
 					if god.link:
@@ -69,7 +77,7 @@ class Scrape:
 						print god.link
 						s.extractInfobox()
 					objlist.append(god)				
-				
+	#returns a deity object given soup.find("li") and soup.find("a")			
 	def createDeityObject(self, li, a):
 		if a != None:
 			link = self.mainUrl + a.get('href')
@@ -82,7 +90,7 @@ class Scrape:
 		god = Deity(name,link)
 		return god
 	
-	def extractWikiLists(self, x, objlist): #getting names of giants and personified concepts
+	def extractWikiLists(self, x, objlist): #getting names of all other deities
 		soupb = BeautifulSoup(unicode(self.lists[x]))
 		for ul in soupb.find("div").find_all("ul",recursive=False):
 			for li in (ul.find_all("li", recursive=False)):
@@ -103,7 +111,8 @@ class Scrape:
 						print god.link
 						s.extractInfobox()
 					objlist.append(god)
-
+				
+				#gets deities in a subcategory
 				ull = i.find("ul")
 				if ull:
 					for s in ull.find_all("li",recursive=False):
@@ -122,6 +131,7 @@ class ScrapeDeity:
 		self.deity = deity
 
 	@staticmethod
+	#checks if something in a list is an actual word -- should be improved
 	def isWord(x):
 		if len(x) >= 1:
 			if (ord(x[0]) >= 64 and ord(x[0]) <= 90) or (ord(x[0]) >= 97 and ord(x[0]) <= 122): 
@@ -129,6 +139,7 @@ class ScrapeDeity:
 					return True
 		return False
 
+	# adds the list of names/objects in an infobox category to a Deity object
 	def extractInfoboxList(self, tr, attribute):
 		td = tr.find("td")
 		for thing in td.children:
@@ -139,7 +150,8 @@ class ScrapeDeity:
 				text = thing.text.encode('utf-8')
 				if self.isWord(text):
 					self.deity.__dict__[attribute] += [text]
-
+	
+	# searches through infobox
 	def extractInfobox(self):
 		infobox = self.soup.find("table", {"class" : "infobox"})
 		if infobox:
