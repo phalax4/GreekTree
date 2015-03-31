@@ -24,6 +24,8 @@ class Scrape:
 		#print self.tables[]
 		for td in self.tables[x]:
 			soupb = BeautifulSoup(unicode(td))
+			list2 = (soupb.select("p"))
+			list3 = (soupb.select("td"))
 			a = soupb.find("a")
 			if x == 0:
 				b = soupb.find("b")
@@ -44,17 +46,30 @@ class Scrape:
 				else:
 					ty = ""
 				god.typie = ty
+				attribute = ""
+				if(len(list3)==3):     ######Grabs the paragraph blurb for titan and primordial
+					#print list3[2]
+					string = (str((list3[2]))[4:])
+					attribute = string[:string.find(".")+1]
+					print attribute
+					#print string[:string.find(".")+1]
+					#print list3[2]
+				elif(len(list3)==2):  ###Paragraph for the 12 main deities
+					string = (str((list2[0]))[3:])
+					attribute = string[:string.find(".")+1]
+					print attribute
+					#print string[:string.find(".")+1]#[soupb.extract() for i in list2]
+				else:
+					attribute = "NULL"
+				god.attribute = attribute
 				if not self.find(god.name, objlist):
 					#going into the deity's webpage
 					if god.link:
 						s = ScrapeDeity(self, god, god.link)
 						print god.link
 						s.extractInfobox()
-					objlist.append(god)
-			#list2 = (soupb.select("td"))
-			#if(len(list2)>0):     ######Grabs the paragraph blurb
-			#	print list2[2]
-
+					objlist.append(god)				
+				
 	def createDeityObject(self, li, a):
 		if a != None:
 			link = self.mainUrl + a.get('href')
@@ -141,8 +156,9 @@ if __name__=='__main__':#testing purposes
 	scraper = Scrape()
 	#testList1 = scraper.extract12Gods()
 	lis = [0,1,2]
+	objlist = []
 	for i in lis:
-		testList1 = scraper.extractWikiTables(i)
+		testList1 = scraper.extractWikiTables(i,objlist)
 		for i in testList1:
 			print i.getName() + " " + i.group
 	for i in [0,1]:
