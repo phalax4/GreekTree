@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup, NavigableString
 from Deity import *
 class Scrape:
 	def __init__(self):
-		self.url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures")
+		self.url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures") #open initial link
 		self.content = self.url.read()
 		self.soup =  BeautifulSoup(self.content)
 		self.tables = [] #table holder for 3 wikitables
@@ -13,8 +13,8 @@ class Scrape:
 		#### Add more attributes for other "segements" of the page
 		self.connect() #connects to the list of myth figures web page
 	def connect(self):		
-		url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures")
-		content = url.read()
+		#url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures")
+		content = self.url.read()
 		soup = BeautifulSoup(content)  #soup contains the Object to access page
 		self.tables = self.soup.findAll("table", {"class" : "wikitable"}) #Grabs the 3 wiki tables: Titans, 12 Gods and Primordial
 		self.lists = self.soup.findAll("div", {"class": "div-col columns column-count column-count-"})
@@ -73,7 +73,7 @@ class Scrape:
 				if not self.find(god.name, objlist):
 					#going into the deity's webpage
 					if god.link:
-						s = ScrapeDeity(self, god, god.link)
+						s = ScrapeDeity(god, god.link)
 						print god.link
 						s.extractInfobox()
 					objlist.append(god)				
@@ -107,7 +107,7 @@ class Scrape:
 				if not self.find(god.name, objlist):
 					#going into the deity's webpage:
 					if god.link:
-						s = ScrapeDeity(self, god, god.link)
+						s = ScrapeDeity(god, god.link)
 						print god.link
 						s.extractInfobox()
 					objlist.append(god)
@@ -125,7 +125,7 @@ class Scrape:
 
 class ScrapeDeity:
 	def __init__(self, deity, link):
-		self.url = urllib2.urlopen(link)
+		self.url = urllib2.urlopen(link)#open link into child page
 		self.content = self.url.read()
 		self.soup = BeautifulSoup(self.content)
 		self.deity = deity
@@ -163,6 +163,8 @@ class ScrapeDeity:
 						self.extractInfoboxList(tr, "children")
 					if category == "Parents":
 						self.extractInfoboxList(tr, "parents")
+		else:
+			return -1;
 
 if __name__=='__main__':#testing purposes
 	scraper = Scrape()
