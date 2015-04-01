@@ -112,8 +112,9 @@ class Scrape:
 						s.extractInfobox()
 					objlist.append(god)
 				
+				"""
 				#gets deities in a subcategory
-				ull = i.find("ul")
+				ull = li.find("ul")
 				if ull:
 					for s in ull.find_all("li",recursive=False):
 						suba = s.find("a", recursive=False)
@@ -122,6 +123,7 @@ class Scrape:
 						else:
 							subname = s.text.encode('utf-8').split(" ")[0]
 						god.sub += [subname]
+				"""
 
 class ScrapeDeity:
 	def __init__(self, deity, link):
