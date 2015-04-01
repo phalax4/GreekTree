@@ -93,8 +93,8 @@ class Scrape:
 	def extractWikiLists(self, x, objlist): #getting names of all other deities
 		soupb = BeautifulSoup(unicode(self.lists[x]))
 		for ul in soupb.find("div").find_all("ul",recursive=False):
-			for li in (ul.find_all("li", recursive=False)):
-				a = li.find("a")
+			for li in (ul.find_all("li")):
+				a = li.find("a", recursive=False)
 				god = self.createDeityObject(li, a)
 				ty = ""
 				if x == 0:
@@ -102,8 +102,7 @@ class Scrape:
 				elif x == 1:
 					ty = "Spirit"
 				god.typie = ty
-				s = ScrapeDeity(god, god.link)
-				s.extractInfobox()
+				
 				if not self.find(god.name, objlist):
 					#going into the deity's webpage:
 					if god.link:
