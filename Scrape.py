@@ -13,7 +13,7 @@ class Scrape:
 		#### Add more attributes for other "segements" of the page
 		self.connect() #connects to the list of myth figures web page
 	def connect(self):		
-		#url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures")
+		url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures")
 		content = self.url.read()
 		soup = BeautifulSoup(content)  #soup contains the Object to access page
 		self.tables = self.soup.findAll("table", {"class" : "wikitable"}) #Grabs the 3 wiki tables: Titans, 12 Gods and Primordial
@@ -23,7 +23,7 @@ class Scrape:
 		
 	def find(self, name, objlist):
 		for god in objlist:
-			if god.name == name:
+			if str(god.name) == name:
 				return True
 		return False
 
@@ -105,8 +105,10 @@ class Scrape:
 				
 				if not self.find(god.name, objlist):
 					#going into the deity's webpage:
-					if god.link:
-						s = ScrapeDeity(god, god.link)
+					if god.link and god.link != "":
+						#print god.link
+						string = god.link
+						s = ScrapeDeity(god,string)
 						print god.link
 						s.extractInfobox()
 					objlist.append(god)

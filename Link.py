@@ -29,7 +29,7 @@ class MakeLinks:
 			#links for children
 			for child in deity.children:
 				for j in range(len(self.objlist)):
-					if self.objlist[j].name == child:
+					if str(self.objlist[j].name) == str(child):
 						target = j
 						link = Link(i, target, 1)
 						self.linklist += [link]
@@ -41,7 +41,7 @@ class MakeLinks:
 			g = deity.group + 1
 			for child in deity.children:
 				for j in range(len(self.objlist)):
-					if self.objlist[j].name == child:
+					if str(self.objlist[j].name) == str(child):
 						newdeity = self.objlist[j]
 						newdeity.group = g
 						self.generations(newdeity)				
