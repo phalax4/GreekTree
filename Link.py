@@ -34,10 +34,26 @@ class MakeLinks:
 						link = Link(i, target, 1)
 						self.linklist += [link]
 						break
+			#links for subcategories
+			if deity.sub != []:
+				deity.typie = "Category"
+				for subgod in deity.sub:
+					for j in range(len(self.objlist)):
+						if self.objlist[j].name == subgod:
+							target = j
+							link = Link(i, target, 2)
+							self.linklist += [link]
+							break
 	def generations(self,deity):
 		if deity.children != []:
-			if "Titans" in deity.children:
-			 	deity.children += ["Oceanus","Tethys","Hyperion","Theia","Coeus","Phoebe","Cronus","Rhea","Mnemosyne","Themis","Crius","Iapetus"]
+			if ("Titans" in deity.children):
+				for god in self.objlist:
+					if god.attribute == "Titan":
+						deity.children += [god.name]
+			if ("The Gigantes" in deity.children):
+				for god in self.objlist:
+					if god.attribute == "Gigante":
+						deity.children += [god.name]
 			g = deity.group + 1
 			for child in deity.children:
 				for j in range(len(self.objlist)):
