@@ -138,7 +138,7 @@ class ScrapeDeity:
 	def isWord(x):
 		if len(x) >= 1:
 			if (ord(x[0]) >= 64 and ord(x[0]) <= 90) or (ord(x[0]) >= 97 and ord(x[0]) <= 122): 
-				if ("and " not in x) and ("the " not in x) and (" the" not in x) and (" or" not in x) and ("None" not in x):
+				if ("and " not in x) and ("the " not in x) and (" the" not in x) and (" or" not in x) and (" or" not in x) and (x != "or") and ("None" not in x):
 					return True
 		return False
 
@@ -152,6 +152,8 @@ class ScrapeDeity:
 			else:
 				text = thing.text.encode('utf-8')
 				if self.isWord(text):
+					if text[:4] == "The ":
+						text = text[4:]
 					self.deity.__dict__[attribute] += [text]
 	
 	# searches through infobox
