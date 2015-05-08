@@ -56,6 +56,8 @@ if __name__=='__main__':
 	print "WikiTables takes: %f" % (t1-t0)
 	print "WikiLists takes: %f" %(t5 - t4)
 
+	for i in objlist:
+		pass
 	t8 = time.time()
 	m = MakeLinks(objlist)
 	m.makeLinks()

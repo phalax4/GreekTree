@@ -2,6 +2,7 @@
 import urllib2
 from bs4 import BeautifulSoup, NavigableString
 from Deity import *
+from nltk import word_tokenize
 class Scrape:
 	def __init__(self):
 		self.url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures") #open initial link
@@ -74,8 +75,10 @@ class Scrape:
 					#going into the deity's webpage
 					if god.link:
 						s = ScrapeDeity(god, god.link)
-						print god.link
-						s.extractInfobox()
+						#print god.link
+						ifInfobox = s.extractInfobox()
+						if ifInfobox == -1:
+							s.extractFromParagraph()
 					objlist.append(god)				
 	#returns a deity object given soup.find("li") and soup.find("a")			
 	def createDeityObject(self, li, a):
@@ -109,8 +112,10 @@ class Scrape:
 						#print god.link
 						string = god.link
 						s = ScrapeDeity(god,string)
-						print god.link
-						s.extractInfobox()
+						#print god.link
+						ifInfobox = s.extractInfobox()
+						if ifInfobox == -1:
+							s.extractFromParagraph()
 					objlist.append(god)
 				
 				"""
@@ -170,7 +175,25 @@ class ScrapeDeity:
 						self.extractInfoboxList(tr, "parents")
 		else:
 			return -1;
-
+	def extractFromParagraph(self):
+		raw = self.soup.get_text()
+		page = self.soup.find_all('p')
+		print "-----------------"
+		for i in page:
+			print i.get_text()
+		print "-----------------"
+		#tokens = word_tokenize(raw)
+		#target = open('gdata', 'w')
+		#target.write(unicode(raw))
+		#target.write('\n')
+		#target.close()
+		#print ".........................................."
+		#print self.deity.name
+		#if str(self.deity.name)=="Iapetus":
+		#	print "----------------"
+		#print tokens
+		#print raw.find("mother of")
+		#print "++++++++++++++++++++++++++++++"
 if __name__=='__main__':#testing purposes
 	scraper = Scrape()
 	#testList1 = scraper.extract12Gods()

@@ -1,8 +1,9 @@
 {
     "nodes":[
         {
-            "group":3,
+            "group":2,
             "name":"Aphrodite",
+            "attribute":"Goddess of love, beauty, desire, sex, and pleasure.",
             "parents":[
                 "Uranus",
                 "Zeus",
@@ -24,7 +25,7 @@
                 "Eryx",
                 "Peitho",
                 "Eunomia",
-                "The Graces",
+                "Graces",
                 "Priapus",
                 "Aeneas",
                 "Tyche"
@@ -32,8 +33,9 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Apollo",
+            "attribute":"God of music, arts, knowledge, healing, plague, prophecy, poetry, manly beauty, archery, and the sun.",
             "parents":[
                 "Zeus",
                 "Leto"
@@ -50,8 +52,9 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Ares",
+            "attribute":"God of war, bloodshed, and violence.",
             "parents":[
                 "Zeus",
                 "Hera"
@@ -72,8 +75,9 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Artemis",
+            "attribute":"Virgin goddess of the hunt, wilderness, animals, young girls, childbirth, plague, and the moon.",
             "parents":[
                 "Zeus",
                 "Leto"
@@ -85,8 +89,9 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Athena",
+            "attribute":"Goddess of intelligence, skill, peace, warfare, battle strategy, handicrafts, and wisdom.",
             "parents":[
                 "Metis",
                 "Metis",
@@ -101,8 +106,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Demeter",
+            "attribute":"Goddess of grain, agriculture and the harvest, growth and nourishment.",
             "parents":[
                 "Cronus",
                 "Rhea"
@@ -123,8 +129,9 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Dionysus",
+            "attribute":"God of wine, parties and festivals, madness, chaos, drunkenness, drugs, and ecstasy.",
             "parents":[
                 "Zeus",
                 "Semele"
@@ -136,8 +143,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Hades",
+            "attribute":"King of the underworld and the dead, and god of regret.",
             "parents":[
                 "Cronus",
                 "Rhea"
@@ -153,8 +161,9 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Hephaestus",
+            "attribute":"Crippled god of fire, metalworking, and crafts.",
             "parents":[
                 "Hera",
                 "Zeus",
@@ -175,8 +184,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Hera",
+            "attribute":"Queen of the gods and goddess of marriage, women, childbirth, heirs, kings, and empires.",
             "parents":[
                 "Cronus",
                 "Rhea"
@@ -195,8 +205,9 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Hermes",
+            "attribute":"God of boundaries, travel, communication, trade, language, and writing.",
             "parents":[
                 "Zeus",
                 "Maia"
@@ -215,8 +226,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Hestia",
+            "attribute":"Virgin goddess of the hearth, home and chastity.",
             "parents":[
                 "Cronus",
                 "Rhea"
@@ -228,8 +240,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Poseidon",
+            "attribute":"God of the sea, rivers, floods, droughts, and earthquakes.",
             "parents":[
                 "Cronus",
                 "Rhea"
@@ -249,8 +262,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Zeus",
+            "attribute":"King and father of the gods, the ruler of Mount Olympus and the god of the sky, weather, thunder, lightning, law, order, and justice.",
             "parents":[
                 "Cronus",
                 "Rhea"
@@ -281,15 +295,14 @@
         },
         {
             "group":-1,
-            "name":"Aether",
+            "name":"Aether ",
+            "attribute":"The god of the upper atmosphere and light.",
             "parents":[
                 "Erebus",
                 "Nyx",
-                "or",
                 "Chronos",
                 "Ananke",
                 "Orphic Hymns",
-                "or",
                 "Chaos",
                 "Hyginus)"
             ],
@@ -306,7 +319,8 @@
         },
         {
             "group":-1,
-            "name":"Ananke",
+            "name":"Ananke ",
+            "attribute":"The goddess of inevitability, compulsion, and necessity.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Ananke_(mythology)",
             "siblings":[],
@@ -316,7 +330,8 @@
         },
         {
             "group":-1,
-            "name":"Chaos",
+            "name":"Chaos ",
+            "attribute":"The nothingness from which all else sprang.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Chaos_(mythology)",
             "siblings":[],
@@ -327,6 +342,7 @@
         {
             "group":-1,
             "name":"Chronos",
+            "attribute":"The god of time.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Chronos",
             "siblings":[],
@@ -337,6 +353,7 @@
         {
             "group":-1,
             "name":"Erebus",
+            "attribute":"The god of darkness and shadow.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Erebus",
             "siblings":[],
@@ -345,8 +362,9 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Eros",
+            "attribute":"The god of love and attraction.",
             "parents":[
                 "Chaos",
                 "Aphrodite",
@@ -368,6 +386,7 @@
         {
             "group":-1,
             "name":"Hypnos",
+            "attribute":"The personification of sleep.",
             "parents":[
                 "Nyx"
             ],
@@ -383,7 +402,8 @@
         },
         {
             "group":-1,
-            "name":"Nesoi",
+            "name":"Nesoi ",
+            "attribute":"The goddesses of the islands and sea.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Nesoi_(mythology)",
             "siblings":[],
@@ -392,34 +412,33 @@
             "sub":[]
         },
         {
-            "group":1,
-            "name":"Uranus",
+            "group":-1,
+            "name":"Uranus ",
+            "attribute":"The god of the heavens (Father Sky); father of the Titans.",
             "parents":[
                 "Gaia",
-                "or",
                 "Aether",
-                "or",
                 "Hemera",
-                "or",
                 "Nyx"
             ],
             "link":"http://en.wikipedia.org/wiki/Uranus_(mythology)",
             "siblings":[],
             "typie":"Primeval",
             "children":[
-                "The Titans",
-                "The Cyclopes",
+                "Titans",
+                "Cyclopes",
                 "Meliae",
-                "The Furies",
-                "The Gigantes",
+                "Furies",
+                "Gigantes",
                 "Hecatonchires",
                 "Aphrodite"
             ],
             "sub":[]
         },
         {
-            "group":0,
-            "name":"Gaia",
+            "group":-1,
+            "name":"Gaia ",
+            "attribute":"Personification of the Earth (Mother Earth); mother of the <a href=\"/wiki/Titan_(mythology)\" title=\"Titan (mythology)\">Titans</a>.",
             "parents":[
                 "Chaos",
                 "Hesiod",
@@ -438,7 +457,7 @@
                 "Hecatonchires",
                 "Cyclopes",
                 "Titans",
-                "The Gigantes",
+                "Gigantes",
                 "Nereus",
                 "Thaumus",
                 "Phorcys",
@@ -446,24 +465,14 @@
                 "Eurybia",
                 "Aergia",
                 "Typhon",
-                "Oceanus",
-                "Tethys",
-                "Hyperion",
-                "Theia",
-                "Coeus",
-                "Phoebe",
-                "Cronus",
-                "Rhea",
-                "Mnemosyne",
-                "Themis",
-                "Crius",
-                "Iapetus"
+                "Python"
             ],
             "sub":[]
         },
         {
             "group":1,
             "name":"Ourea",
+            "attribute":"The gods of mountains.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Ourea",
             "siblings":[],
@@ -473,7 +482,8 @@
         },
         {
             "group":-1,
-            "name":"Phanes",
+            "name":"Phanes ",
+            "attribute":"The god of procreation in the <a class=\"mw-redirect\" href=\"/wiki/Orphics\" title=\"Orphics\">Orphic tradition</a>.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Phanes_(mythology)",
             "siblings":[],
@@ -482,8 +492,9 @@
             "sub":[]
         },
         {
-            "group":1,
-            "name":"Pontus",
+            "group":-1,
+            "name":"Pontus ",
+            "attribute":"The god of the sea, father of the fish and other sea creatures.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Pontus_(mythology)",
             "siblings":[],
@@ -494,6 +505,7 @@
         {
             "group":-1,
             "name":"Tartarus",
+            "attribute":"The god of the deepest, darkest part of the underworld, the Tartarean pit (which is also referred to as Tartarus itself).",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Tartarus",
             "siblings":[],
@@ -503,7 +515,8 @@
         },
         {
             "group":-1,
-            "name":"Thalassa",
+            "name":"Thalassa ",
+            "attribute":"Personification of the sea and consort of Pontus.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Thalassa_(mythology)",
             "siblings":[],
@@ -514,6 +527,7 @@
         {
             "group":-1,
             "name":"Thanatos",
+            "attribute":"God of Death.",
             "parents":[
                 "Nyx",
                 "Erebus"
@@ -527,6 +541,7 @@
         {
             "group":-1,
             "name":"Hemera",
+            "attribute":"The goddess of day.",
             "parents":[
                 "Erebus",
                 "Nyx"
@@ -541,7 +556,8 @@
         },
         {
             "group":-1,
-            "name":"Nyx",
+            "name":"Nyx ",
+            "attribute":"The goddess of night.",
             "parents":[
                 "Chaos"
             ],
@@ -553,6 +569,7 @@
                 "Hemera",
                 "Moros",
                 "Apate",
+                "Dolos",
                 "Nemesis",
                 "Keres",
                 "Moirai",
@@ -571,7 +588,8 @@
         },
         {
             "group":-1,
-            "name":"Nemesis",
+            "name":"Nemesis ",
+            "attribute":"The goddess of retribution.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Nemesis_(mythology)",
             "siblings":[],
@@ -580,8 +598,9 @@
             "sub":[]
         },
         {
-            "group":1,
+            "group":-1,
             "name":"Coeus",
+            "attribute":"Titan of intellect and the axis of heaven around which the constellations revolved.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Coeus",
             "siblings":[],
@@ -590,8 +609,9 @@
             "sub":[]
         },
         {
-            "group":1,
+            "group":-1,
             "name":"Crius",
+            "attribute":"The least individualized of the Twelve Titans, he is the father of <a href=\"/wiki/Astraeus\" title=\"Astraeus\">Astraeus</a>, <a href=\"/wiki/Pallas_(Titan)\" title=\"Pallas (Titan)\">Pallas</a>, and <a href=\"/wiki/Perses_(Titan)\" title=\"Perses (Titan)\">Perses</a>.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Crius",
             "siblings":[],
@@ -600,8 +620,9 @@
             "sub":[]
         },
         {
-            "group":1,
+            "group":-1,
             "name":"Cronus",
+            "attribute":"The leader of the Titans, who overthrew his father <a href=\"/wiki/Uranus_(mythology)\" title=\"Uranus (mythology)\">Uranus</a> only to be overthrown in turn by his son, <a href=\"/wiki/Zeus\" title=\"Zeus\">Zeus</a>.",
             "parents":[
                 "Uranus",
                 "Gaia"
@@ -621,8 +642,9 @@
             "sub":[]
         },
         {
-            "group":1,
-            "name":"Hyperion",
+            "group":-1,
+            "name":"Hyperion ",
+            "attribute":"Titan of light.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Hyperion_(mythology)",
             "siblings":[],
@@ -631,8 +653,9 @@
             "sub":[]
         },
         {
-            "group":1,
-            "name":"Iapetus",
+            "group":-1,
+            "name":"Iapetus ",
+            "attribute":"Titan of mortality and father of <a href=\"/wiki/Prometheus\" title=\"Prometheus\">Prometheus</a>, <a href=\"/wiki/Epimetheus_(mythology)\" title=\"Epimetheus (mythology)\">Epimetheus</a>, <a class=\"mw-redirect\" href=\"/wiki/Menoetius_(mythology)\" title=\"Menoetius (mythology)\">Menoetius</a>, and <a href=\"/wiki/Atlas_(mythology)\" title=\"Atlas (mythology)\">Atlas</a>.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Iapetus_(mythology)",
             "siblings":[],
@@ -641,8 +664,9 @@
             "sub":[]
         },
         {
-            "group":1,
+            "group":-1,
             "name":"Mnemosyne",
+            "attribute":"Titaness of memory and remembrance, and mother of the <a href=\"/wiki/Muse\" title=\"Muse\">Nine Muses</a>.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Mnemosyne",
             "siblings":[],
@@ -651,8 +675,9 @@
             "sub":[]
         },
         {
-            "group":1,
+            "group":-1,
             "name":"Oceanus",
+            "attribute":"Titan of the all-encircling river Oceans around the earth, the fount of all the Earth's fresh-water.",
             "parents":[
                 "Uranus",
                 "Gaia"
@@ -676,8 +701,9 @@
             "sub":[]
         },
         {
-            "group":1,
-            "name":"Phoebe",
+            "group":-1,
+            "name":"Phoebe ",
+            "attribute":"Titaness of the \"bright\" intellect and prophecy, and consort of Koios.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Phoebe_(mythology)",
             "siblings":[],
@@ -686,8 +712,9 @@
             "sub":[]
         },
         {
-            "group":1,
-            "name":"Rhea",
+            "group":-1,
+            "name":"Rhea ",
+            "attribute":"Titaness of fertility, motherhood and the mountain wilds.",
             "parents":[
                 "Uranus",
                 "Gaia"
@@ -706,8 +733,9 @@
             "sub":[]
         },
         {
-            "group":1,
-            "name":"Tethys",
+            "group":-1,
+            "name":"Tethys ",
+            "attribute":"Titaness of fresh-water, and the mother of the rivers, springs, streams, fountains, and clouds.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Tethys_(mythology)",
             "siblings":[],
@@ -716,8 +744,9 @@
             "sub":[]
         },
         {
-            "group":1,
+            "group":-1,
             "name":"Theia",
+            "attribute":"Titaness of sight and the shining light of the clear blue sky.",
             "parents":[
                 "Gaia",
                 "Uranus"
@@ -733,8 +762,9 @@
             "sub":[]
         },
         {
-            "group":1,
+            "group":-1,
             "name":"Themis",
+            "attribute":"Titaness of divine law and order.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Themis",
             "siblings":[],
@@ -745,6 +775,7 @@
         {
             "group":-1,
             "name":"Asteria",
+            "attribute":"Titaness of nocturnal oracles and falling stars.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Asteria",
             "siblings":[],
@@ -755,6 +786,7 @@
         {
             "group":-1,
             "name":"Astraeus",
+            "attribute":"Titan of dusk, stars, and planets, and the art of astrology.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Astraeus",
             "siblings":[],
@@ -763,8 +795,9 @@
             "sub":[]
         },
         {
-            "group":3,
-            "name":"Atlas",
+            "group":-1,
+            "name":"Atlas ",
+            "attribute":"Titan forced to carry the heavens upon his shoulders by Zeus.",
             "parents":[
                 "Iapetus",
                 "Asia",
@@ -786,7 +819,8 @@
         },
         {
             "group":-1,
-            "name":"Aura",
+            "name":"Aura ",
+            "attribute":"Titaness of the breeze and the fresh, cool air of early morning.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Aura_(mythology)",
             "siblings":[],
@@ -796,7 +830,8 @@
         },
         {
             "group":-1,
-            "name":"Clymene",
+            "name":"Clymene ",
+            "attribute":"Titaness of renown, fame, and infamy, and wife of Iapetus.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Clymene_(mythology)",
             "siblings":[],
@@ -805,8 +840,9 @@
             "sub":[]
         },
         {
-            "group":4,
-            "name":"Dione",
+            "group":-1,
+            "name":"Dione ",
+            "attribute":"Titaness of the oracle of Dodona.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Dione_(Titaness/Oceanid)",
             "siblings":[],
@@ -815,8 +851,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Helios",
+            "attribute":"Titan of the sun and guardian of oaths.",
             "parents":[
                 "Hyperion",
                 "Theia",
@@ -838,8 +875,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Selene",
+            "attribute":"Titaness of the moon.",
             "parents":[
                 "Hyperion",
                 "Theia"
@@ -855,8 +893,9 @@
             "sub":[]
         },
         {
-            "group":2,
+            "group":-1,
             "name":"Eos",
+            "attribute":"Titaness of the dawn.",
             "parents":[
                 "Hyperion",
                 "Theia"
@@ -871,7 +910,8 @@
         },
         {
             "group":-1,
-            "name":"Epimetheus",
+            "name":"Epimetheus ",
+            "attribute":"Titan of afterthought and the father of excuses.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Epimetheus_(mythology)",
             "siblings":[],
@@ -880,8 +920,9 @@
             "sub":[]
         },
         {
-            "group":1,
-            "name":"Eurybia",
+            "group":-1,
+            "name":"Eurybia ",
+            "attribute":"Titaness of the mastery of the seas and consort of Krios.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Eurybia_(mythology)",
             "siblings":[],
@@ -891,7 +932,8 @@
         },
         {
             "group":-1,
-            "name":"Eurynome",
+            "name":"Eurynome ",
+            "attribute":"Titaness of water-meadows and pasturelands, and mother of the three <a href=\"/wiki/Charites\" title=\"Charites\">Charites</a> by Zeus.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Eurynome_(Oceanid)",
             "siblings":[],
@@ -902,6 +944,7 @@
         {
             "group":-1,
             "name":"Lelantos",
+            "attribute":"Titan of air and the hunter's skill of stalking prey.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Lelantos",
             "siblings":[],
@@ -912,6 +955,7 @@
         {
             "group":-1,
             "name":"Leto",
+            "attribute":"Titaness of motherhood and mother of the twin Olympians, Artemis and Apollo.",
             "parents":[
                 "Coeus",
                 "Phoebe"
@@ -927,7 +971,8 @@
         },
         {
             "group":-1,
-            "name":"Menoetius",
+            "name":"Menoetius ",
+            "attribute":"Titan of violent anger, rash action, and human mortality.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Menoetius_(mythology)",
             "siblings":[],
@@ -936,8 +981,9 @@
             "sub":[]
         },
         {
-            "group":2,
-            "name":"Metis",
+            "group":-1,
+            "name":"Metis ",
+            "attribute":"Titaness of good counsel, advice, planning, cunning, craftiness, and wisdom.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Metis_(mythology)",
             "siblings":[],
@@ -948,6 +994,7 @@
         {
             "group":-1,
             "name":"Ophion",
+            "attribute":"An elder Titan, in some versions of the myth he ruled the Earth with his consort Eurynome before Cronus overthrew him.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Ophion",
             "siblings":[],
@@ -957,7 +1004,8 @@
         },
         {
             "group":-1,
-            "name":"Pallas",
+            "name":"Pallas ",
+            "attribute":"Titan of warcraft.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Pallas_(Titan)",
             "siblings":[],
@@ -967,7 +1015,8 @@
         },
         {
             "group":-1,
-            "name":"Perses",
+            "name":"Perses ",
+            "attribute":"Titan of destruction.",
             "parents":[
                 "Crius",
                 "Eurybia"
@@ -983,6 +1032,7 @@
         {
             "group":-1,
             "name":"Prometheus",
+            "attribute":"Titan of forethought and crafty counsel, and creator of mankind.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Prometheus",
             "siblings":[],
@@ -993,6 +1043,7 @@
         {
             "group":-1,
             "name":"Styx",
+            "attribute":"Titaness of the Underworld river Styx and personification of hatred.",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Styx",
             "siblings":[],
@@ -1168,24 +1219,11 @@
             "siblings":[],
             "typie":"Giant",
             "children":[],
-            "sub":[
-                "Otus",
-                "Ephialtes"
-            ]
-        },
-        {
-            "group":-1,
-            "name":"Otus",
-            "parents":[],
-            "link":"",
-            "siblings":[],
-            "typie":"Giant",
-            "children":[],
             "sub":[]
         },
         {
             "group":-1,
-            "name":"Ephialtes",
+            "name":"Otus",
             "parents":[],
             "link":"",
             "siblings":[],
@@ -1237,7 +1275,7 @@
             "group":-1,
             "name":"Asterius",
             "parents":[],
-            "link":"http://en.wikipedia.org/wiki/Asterius",
+            "link":"http://en.wikipedia.org/wiki/Asterius_(Giant)",
             "siblings":[],
             "typie":"Giant",
             "children":[],
@@ -1251,11 +1289,7 @@
             "siblings":[],
             "typie":"Giant",
             "children":[],
-            "sub":[
-                "Arges",
-                "Brontes",
-                "Steropes"
-            ]
+            "sub":[]
         },
         {
             "group":-1,
@@ -1286,18 +1320,6 @@
             "typie":"Giant",
             "children":[],
             "sub":[]
-        },
-        {
-            "group":-1,
-            "name":"Cyclopes",
-            "parents":[],
-            "link":"http://en.wikipedia.org/wiki/Cyclops",
-            "siblings":[],
-            "typie":"Giant",
-            "children":[],
-            "sub":[
-                "Polyphemus"
-            ]
         },
         {
             "group":3,
@@ -1337,11 +1359,7 @@
             "siblings":[],
             "typie":"Giant",
             "children":[],
-            "sub":[
-                "Briareus",
-                "Cottus",
-                "Gyges"
-            ]
+            "sub":[]
         },
         {
             "group":-1,
@@ -1378,16 +1396,6 @@
             "name":"Laestrygonians",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Laestrygonians",
-            "siblings":[],
-            "typie":"Giant",
-            "children":[],
-            "sub":[]
-        },
-        {
-            "group":-1,
-            "name":"Geryon",
-            "parents":[],
-            "link":"http://en.wikipedia.org/wiki/Geryon",
             "siblings":[],
             "typie":"Giant",
             "children":[],
@@ -1577,11 +1585,7 @@
             "siblings":[],
             "typie":"Spirit",
             "children":[],
-            "sub":[
-                "Achos",
-                "Ania",
-                "Lupe"
-            ]
+            "sub":[]
         },
         {
             "group":-1,
@@ -1634,7 +1638,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Amphilogiai",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Amphilogiai",
@@ -1654,7 +1658,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Androktasiai",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Androktasiai",
@@ -1664,7 +1668,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Angelia",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Angelia",
@@ -1724,7 +1728,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"At\u00eb",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/At%C3%AB",
@@ -1764,7 +1768,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Deimos",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Deimos_(mythology)",
@@ -1810,7 +1814,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Dysnomia",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Dysnomia_(mythology)",
@@ -1832,11 +1836,16 @@
         {
             "group":-1,
             "name":"Eirene",
-            "parents":[],
+            "parents":[
+                "Zeus",
+                "Themis"
+            ],
             "link":"http://en.wikipedia.org/wiki/Eirene_(Greek_goddess)",
             "siblings":[],
             "typie":"Spirit",
-            "children":[],
+            "children":[
+                "Ploutos"
+            ],
             "sub":[]
         },
         {
@@ -1880,7 +1889,7 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Eris",
             "parents":[
                 "Nyx",
@@ -1909,23 +1918,17 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Erotes",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Erotes_(mythology)",
             "siblings":[],
             "typie":"Spirit",
             "children":[],
-            "sub":[
-                "Anteros",
-                "Eros",
-                "Hedylogos",
-                "Himeros",
-                "Pothos"
-            ]
+            "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Anteros",
             "parents":[
                 "Aphrodite",
@@ -1939,27 +1942,6 @@
         },
         {
             "group":-1,
-            "name":"Eros",
-            "parents":[
-                "Chaos",
-                "Aphrodite",
-                "Ares",
-                "Hermes",
-                "penia",
-                "porus",
-                "Iris",
-                "Zephyrus"
-            ],
-            "link":"http://en.wikipedia.org/wiki/Eros_(god)",
-            "siblings":[],
-            "typie":"Spirit",
-            "children":[
-                "Hedone"
-            ],
-            "sub":[]
-        },
-        {
-            "group":-1,
             "name":"Hedylogos",
             "parents":[],
             "link":"",
@@ -1969,7 +1951,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Himeros",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Himeros",
@@ -1979,7 +1961,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Pothos",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Pothos_(mythology)",
@@ -1989,7 +1971,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Eucleia",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Eucleia",
@@ -2009,7 +1991,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Eunomia",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Eunomia_(goddess)",
@@ -2019,7 +2001,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Eupheme",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Eupheme",
@@ -2049,7 +2031,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Euthenia",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Euthenia",
@@ -2079,7 +2061,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Harmonia",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Harmonia_(mythology)",
@@ -2089,7 +2071,7 @@
             "sub":[]
         },
         {
-            "group":3,
+            "group":-1,
             "name":"Hebe",
             "parents":[
                 "Zeus",
@@ -2102,7 +2084,7 @@
             "sub":[]
         },
         {
-            "group":5,
+            "group":4,
             "name":"Hedone",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Hedone",
@@ -2142,7 +2124,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Horkos",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Horkos",
@@ -2173,22 +2155,6 @@
         },
         {
             "group":-1,
-            "name":"Hypnos",
-            "parents":[
-                "Nyx"
-            ],
-            "link":"http://en.wikipedia.org/wiki/Hypnos",
-            "siblings":[],
-            "typie":"Spirit",
-            "children":[
-                "Morpheus",
-                "Phobetor",
-                "Phantasos"
-            ],
-            "sub":[]
-        },
-        {
-            "group":4,
             "name":"Hysminai",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Hysminai",
@@ -2268,7 +2234,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Lethe",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Lethe",
@@ -2278,7 +2244,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Limos",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Limos_(mythology)",
@@ -2335,11 +2301,7 @@
             "siblings":[],
             "typie":"Spirit",
             "children":[],
-            "sub":[
-                "Clotho",
-                "Lachesis",
-                "Atropos"
-            ]
+            "sub":[]
         },
         {
             "group":-1,
@@ -2392,7 +2354,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Neikea",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Neikea",
@@ -2452,12 +2414,7 @@
             "siblings":[],
             "typie":"Spirit",
             "children":[],
-            "sub":[
-                "Epiales",
-                "Morpheus",
-                "Phantasos",
-                "Phobetor"
-            ]
+            "sub":[]
         },
         {
             "group":-1,
@@ -2525,7 +2482,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Peitho",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Peitho",
@@ -2575,7 +2532,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Philophrosyne",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Philophrosyne",
@@ -2595,7 +2552,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Phobos",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Phobos_(mythology)",
@@ -2605,7 +2562,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Phonoi",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Phonoi",
@@ -2715,7 +2672,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":-1,
             "name":"Pseudologoi",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Pseudologoi",
@@ -2776,19 +2733,6 @@
         },
         {
             "group":-1,
-            "name":"Thanatos",
-            "parents":[
-                "Nyx",
-                "Erebus"
-            ],
-            "link":"http://en.wikipedia.org/wiki/Thanatos",
-            "siblings":[],
-            "typie":"Spirit",
-            "children":[],
-            "sub":[]
-        },
-        {
-            "group":-1,
             "name":"Thrasos",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Thrasos",
@@ -2798,7 +2742,7 @@
             "sub":[]
         },
         {
-            "group":4,
+            "group":3,
             "name":"Tyche",
             "parents":[],
             "link":"http://en.wikipedia.org/wiki/Tyche",
@@ -2816,6 +2760,2916 @@
             "typie":"Spirit",
             "children":[],
             "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Amphiaraus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Amphiaraus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Angelos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Angelos_(Greek_mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Askalaphos",
+            "parents":[
+                "Acheron",
+                "Orphne"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Ascalaphus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cerberus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cerberus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Charon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Charon_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Empusa",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Empusa",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Erebos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Erebus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Erinyes",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Erinyes",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Alecto",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Alecto",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Tisiphone",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Tisiphone",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Megaera",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Megaera",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Hecate",
+            "parents":[
+                "Perses",
+                "Asteria"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Hecate",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Judges",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aiakos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Aeacus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Minos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Minos",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Rhadamanthys",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Rhadamanthus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Keuthonymos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Keuthonymos",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Lamia",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Lamia_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Lampades",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Lampads",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Gorgyra",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Gorgyra",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Ascalaphus"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Orphne",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Orphne",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Ascalaphus"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Macaria",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Macaria",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Melinoe",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Melinoe",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Menoetes",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Menoetius_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Mormo",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Mormo",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nyx",
+            "parents":[
+                "Chaos"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Nyx_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Aether",
+                "Hemera",
+                "Moros",
+                "Apate",
+                "Dolos",
+                "Nemesis",
+                "Keres",
+                "Moirai",
+                "Hesperides",
+                "Oizys",
+                "Momus",
+                "Oneiroi",
+                "Hypnos",
+                "Thanatos",
+                "Philotes",
+                "Geras",
+                "Eris",
+                "Charon"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Persephone",
+            "parents":[
+                "Zeus",
+                "Demeter"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Persephone",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Melinoe",
+                "Zagreus",
+                "Makaria"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Rivers",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Acheron",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Acheron",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Kokytos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cocytus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Phlegethon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Phlegethon",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aegaeon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Hecatonchires",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Achelous",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Achelous",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Benthesikyme",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Benthesikyme",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Brizo",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Brizo",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":1,
+            "name":"Ceto",
+            "parents":[
+                "Pontus",
+                "Gaia"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Ceto",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Hesperides",
+                "Gorgons",
+                "Graeae",
+                "Thoosa",
+                "Scylla",
+                "Echidna",
+                "Ladon",
+                "Monsters"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Charybdis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Charybdis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cymopoleia",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cymopoleia",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Delphin",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Proteus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Proteus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Glaucus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Glaucus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":2,
+            "name":"Gorgons",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Gorgons",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Stheno",
+            "parents":[
+                "Phorcys",
+                "Ceto"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Stheno",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Euryale",
+            "parents":[
+                "Phorcys",
+                "Ceto"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Euryale",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Medusa",
+            "parents":[
+                "Phorcys",
+                "Ceto"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Medusa",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Pegasus",
+                "Chrysaor"
+            ],
+            "sub":[]
+        },
+        {
+            "group":2,
+            "name":"Graeae",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Graeae",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Deino",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Enyo",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pemphredo",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Harpies",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Harpy",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aello",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Aello",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Ocypete",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Ocypete",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Podarge",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Podarge",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Celaeno",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Celaeno",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nicothoe",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Hippocampi",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Hippocamp",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Hydros",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Hydros_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Ichthyocentaurs",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Ichthyocentaurs",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Bythos",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aphros",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Karkinos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Carcinus_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":2,
+            "name":"Ladon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Ladon_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Leucothea",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Leucothea",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nereides",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Nereid",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Thetis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Thetis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Arethusa",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Arethusa_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Galene",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Galene_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Psamathe",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Psamathe_(Nereid)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":1,
+            "name":"Nereus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Nereus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nerites",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Nerites_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Palaemon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Palaemon_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":1,
+            "name":"Phorcys",
+            "parents":[
+                "Pontus",
+                "Gaia"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Phorcys",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Hesperides",
+                "Gorgons",
+                "Graeae",
+                "Thoosa",
+                "Scylla",
+                "Echidna",
+                "Ladon"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pontos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Pontus_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Amphitrite",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Amphitrite",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":2,
+            "name":"Scylla",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Scylla",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Sirens",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Siren_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aglaope",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Himerope",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Leucosia",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Ligeia",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Molpe",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Parthenope",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Peisinoe",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Raidne",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Teles",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Thelchtereia",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Thelxiope",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Telchines",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Telchines",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Actaeus",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Argyron",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Atabyrius",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Chalcon",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Chryson",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Damon",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Damnameneus",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Lycos",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Lysagora",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Makelo",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Megalesius",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Mylas",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nikon",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Ormenos",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Simon",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Skelmis",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Tethys",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Tethys_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Thalassa",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Thalassa_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Thaumas",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Thaumas",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":2,
+            "name":"Thoosa",
+            "parents":[
+                "Phorcys",
+                "Ceto"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Thoosa",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Polyphemus"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Triteia",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Triteia",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Triton",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Triton_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Tritones",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Triton_(mythology)#Tritons",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Achelois",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Achelois",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aeolus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Aeolus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aether",
+            "parents":[
+                "Erebus",
+                "Nyx",
+                "Chronos",
+                "Ananke",
+                "Orphic Hymns",
+                "Chaos",
+                "Hyginus)"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Aether_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Gaia",
+                "Thalassa",
+                "Uranus",
+                "Aergia"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Alectrona",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Alectrona",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aparctias",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Apheliotes",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Argestes",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Caicias",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Circios",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Euronotus",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Lips",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Skeiron",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Arke",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Arke_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Astraios",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Astraeus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"The",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Stilbon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Stilbon_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Eosphorus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Eosphorus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Hesperus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Hesperus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pyroeis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Pyroeis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Phaethon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Phaethon",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Phaenon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Phaenon",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aurai",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Aurai",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aura",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Aura_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Chaos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Chaos_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Chione",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Chione_(daughter_of_Boreas)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":1,
+            "name":"Uranus",
+            "parents":[
+                "Gaia",
+                "Aether",
+                "Hemera",
+                "Nyx"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Uranus_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Titans",
+                "Cyclopes",
+                "Meliae",
+                "Furies",
+                "Gigantes",
+                "Hecatonchires",
+                "Aphrodite"
+            ],
+            "sub":[]
+        },
+        {
+            "group":2,
+            "name":"Hesperides",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Hesperides",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Iris",
+            "parents":[
+                "Thaumas",
+                "Electra"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Iris_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Pothos"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nephelai",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Nephelai",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pandia",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Pandia",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Ersa",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Ersa",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Anemoi",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Anemoi",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Boreas",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Boreas_(god)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Eurus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Eurus_(named_wind)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Notus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Anemoi#South_wind_.28Notus.29",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Zephyrus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Zephyrus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pleiades",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Pleiades_(Greek_mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Alcyone",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Alcyone_(Pleiades)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Sterope",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Sterope_(Pleiad)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Electra",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Electra_(Pleiad)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Maia",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Maia_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Merope",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Merope_(Pleiades)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Taygete",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Taygete",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aetna",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Aetna_(nymph)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Amphictyonis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Amphictyonis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Anthousai",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Anthousai",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aristaeus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Aristaeus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Attis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Attis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Britomartis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Britomartis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cabeiri",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cabeiri",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aitnaios",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Alkon",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Onnes",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Tonnes",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Centaurs",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Centaur",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Asbolus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Asbolus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Chariclo",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Chariclo",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Chiron",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Chiron",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Eurytion",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Eurytion",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nessus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Nessus_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pholus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Pholus_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cercopes",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cercopes",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Akmon",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Passalos",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Chloris",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Chloris#Chloris_.28Nymph.29",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Comus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Comus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Corymbus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Corymbus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Curetes",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Korybantes",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cybele",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cybele",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Dactyls",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Dactyl_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Acmon",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Acmon_(Dactyl)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Delas",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Epimedes",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Heracles",
+            "parents":[
+                "Zeus",
+                "Alcmene"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Heracles",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Telephus",
+                "Hyllus",
+                "Tlepolemus"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Iasios",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Kelmis",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Skythes",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"companions",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Titias",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Titias",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cyllenus",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Dryades",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Dryad",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":0,
+            "name":"Gaia",
+            "parents":[
+                "Chaos",
+                "Hesiod",
+                "or ",
+                "Aether",
+                "Hemera",
+                "Hyginus"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Gaia_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Uranus",
+                "Pontus",
+                "Ourea",
+                "Hecatonchires",
+                "Cyclopes",
+                "Titans",
+                "Gigantes",
+                "Nereus",
+                "Thaumus",
+                "Phorcys",
+                "Ceto",
+                "Eurybia",
+                "Aergia",
+                "Typhon",
+                "Python"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Epimeliades",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Epimeliad",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Hamadryades",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Hamadryad",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Hecaterus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Hecaterus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Horae",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Horae",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Thallo",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Thallo",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Auxo",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Auxo",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Karpo",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Horae",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pherousa",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Pherousa",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Euporie",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Euporie",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Orthosie",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Horae",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Auge",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Anatole",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Mousika",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Gymnastik",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nymphe",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Mesembria",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Sponde",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Sponde",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Elet",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Akt",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Hesperis",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Dysis",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Arktos",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Eiar",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Theros",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pthinoporon",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cheimon",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Korybantes",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Korybantes",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Damneus",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Idaios",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Kyrbas",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Kyrbas",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Okythoos",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Prymneus",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pyrrhichos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Pyrrhichos",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Maenades",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Maenad",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Methe",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Methe",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":2,
+            "name":"Meliae",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Meliae",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Naiades",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Naiad",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Daphne",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Daphne",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Metope",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Metope_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Minthe",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Minthe",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Nymphai Hyperboreioi",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Nymphai_Hyperboreioi",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Hekaerge",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Loxo",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Oupis",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Oreades",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Oread",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Adrasteia",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Adrasteia",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Echo",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Echo_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Iynx"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Oceanides",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Oceanid",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Beroe",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Beroe_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Calypso",
+            "parents":[
+                "Atlas"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Calypso_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "By some accounts ",
+                "Latinus",
+                "by others ",
+                "Nausithous",
+                "Nausinous"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Clytie",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Clytie",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Eidyia",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Eidyia",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"for",
+            "parents":[],
+            "link":"",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Palici",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Palici",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Pan",
+            "parents":[
+                "many variations including: ",
+                "Hermes",
+                "Driope",
+                "Aphrodite",
+                "Penelope",
+                "or ",
+                "Hecate"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Pan_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Potamoi",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/List_of_Potamoi",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Acis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Acis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Alpheus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Alpheus_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Asopus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Asopus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cladeus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cladeus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Eurotas",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Eurotas",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cocytus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cocytus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Peneus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Peneus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Scamander",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Scamander",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":3,
+            "name":"Priapus",
+            "parents":[
+                "Dionysus",
+                "Aphrodite"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Priapus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Rhea",
+            "parents":[
+                "Uranus",
+                "Gaia"
+            ],
+            "link":"http://en.wikipedia.org/wiki/Rhea_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[
+                "Poseidon",
+                "Hades",
+                "Demeter",
+                "Hestia",
+                "Hera",
+                "Zeus"
+            ],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Satyrs",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Satyr",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Krotos",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Krotos",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Silenus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Silenus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Telete",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Telete",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Zagreus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Zagreus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Adonis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Adonis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Aphaea",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Aphaea",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Carme",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Carme_(mythology)",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Carmanor",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Carmanor",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Chrysothemis",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Chrysothemis",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Cyamites",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Cyamites",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Despoina",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Despoina",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Eunostus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Eunostus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Philomelus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Philomelus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
+        },
+        {
+            "group":-1,
+            "name":"Plutus",
+            "parents":[],
+            "link":"http://en.wikipedia.org/wiki/Plutus",
+            "siblings":[],
+            "typie":"",
+            "children":[],
+            "sub":[]
         }
     ],
     "links":[
@@ -2826,27 +5680,37 @@
         },
         {
             "source":0,
-            "target":216,
+            "target":211,
             "value":1
         },
         {
             "source":0,
-            "target":140,
+            "target":137,
             "value":1
         },
         {
             "source":0,
-            "target":167,
-            "value":1
-        },
-        {
-            "source":0,
-            "target":157,
+            "target":163,
             "value":1
         },
         {
             "source":0,
             "target":153,
+            "value":1
+        },
+        {
+            "source":0,
+            "target":150,
+            "value":1
+        },
+        {
+            "source":0,
+            "target":152,
+            "value":1
+        },
+        {
+            "source":0,
+            "target":204,
             "value":1
         },
         {
@@ -2856,22 +5720,22 @@
         },
         {
             "source":0,
-            "target":209,
+            "target":489,
             "value":1
         },
         {
             "source":0,
-            "target":160,
+            "target":230,
             "value":1
         },
         {
-            "source":0,
-            "target":236,
+            "source":1,
+            "target":389,
             "value":1
         },
         {
             "source":2,
-            "target":152,
+            "target":149,
             "value":1
         },
         {
@@ -2881,42 +5745,87 @@
         },
         {
             "source":2,
-            "target":153,
+            "target":150,
             "value":1
         },
         {
             "source":2,
-            "target":216,
+            "target":211,
             "value":1
         },
         {
             "source":2,
-            "target":140,
+            "target":137,
             "value":1
         },
         {
             "source":2,
-            "target":167,
+            "target":163,
+            "value":1
+        },
+        {
+            "source":5,
+            "target":258,
+            "value":1
+        },
+        {
+            "source":5,
+            "target":502,
+            "value":1
+        },
+        {
+            "source":5,
+            "target":505,
+            "value":1
+        },
+        {
+            "source":5,
+            "target":504,
+            "value":1
+        },
+        {
+            "source":5,
+            "target":500,
+            "value":1
+        },
+        {
+            "source":7,
+            "target":253,
+            "value":1
+        },
+        {
+            "source":7,
+            "target":254,
+            "value":1
+        },
+        {
+            "source":7,
+            "target":495,
             "value":1
         },
         {
             "source":8,
-            "target":158,
+            "target":154,
             "value":1
         },
         {
             "source":8,
-            "target":161,
+            "target":157,
             "value":1
         },
         {
             "source":8,
-            "target":214,
+            "target":209,
             "value":1
         },
         {
             "source":8,
-            "target":164,
+            "target":392,
+            "value":1
+        },
+        {
+            "source":8,
+            "target":160,
             "value":1
         },
         {
@@ -2926,7 +5835,12 @@
         },
         {
             "source":9,
-            "target":168,
+            "target":279,
+            "value":1
+        },
+        {
+            "source":9,
+            "target":164,
             "value":1
         },
         {
@@ -2936,27 +5850,32 @@
         },
         {
             "source":9,
-            "target":151,
+            "target":148,
             "value":1
         },
         {
             "source":10,
-            "target":236,
+            "target":479,
             "value":1
         },
         {
             "source":10,
-            "target":130,
+            "target":230,
+            "value":1
+        },
+        {
+            "source":10,
+            "target":127,
             "value":1
         },
         {
             "source":12,
-            "target":95,
+            "target":341,
             "value":1
         },
         {
             "source":12,
-            "target":47,
+            "target":93,
             "value":1
         },
         {
@@ -2991,7 +5910,7 @@
         },
         {
             "source":13,
-            "target":168,
+            "target":164,
             "value":1
         },
         {
@@ -3001,47 +5920,67 @@
         },
         {
             "source":13,
+            "target":416,
+            "value":1
+        },
+        {
+            "source":13,
             "target":8,
             "value":1
         },
         {
-            "source":14,
-            "target":23,
+            "source":13,
+            "target":246,
             "value":1
         },
         {
             "source":14,
-            "target":28,
+            "target":424,
             "value":1
         },
         {
             "source":14,
-            "target":22,
+            "target":337,
             "value":1
         },
         {
             "source":14,
-            "target":114,
+            "target":368,
+            "value":1
+        },
+        {
+            "source":14,
+            "target":111,
             "value":1
         },
         {
             "source":19,
-            "target":169,
+            "target":165,
             "value":1
         },
         {
             "source":20,
-            "target":204,
+            "target":199,
             "value":1
         },
         {
             "source":20,
-            "target":206,
+            "target":201,
             "value":1
         },
         {
             "source":20,
-            "target":205,
+            "target":200,
+            "value":1
+        },
+        {
+            "source":22,
+            "target":89,
+            "value":1
+        },
+        {
+            "source":22,
+            "target":460,
             "value":1
         },
         {
@@ -3051,12 +5990,7 @@
         },
         {
             "source":23,
-            "target":22,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":26,
+            "target":368,
             "value":1
         },
         {
@@ -3066,92 +6000,42 @@
         },
         {
             "source":23,
-            "target":90,
+            "target":89,
             "value":1
         },
         {
             "source":23,
-            "target":55,
+            "target":300,
             "value":1
         },
         {
             "source":23,
-            "target":114,
+            "target":303,
             "value":1
         },
         {
             "source":23,
-            "target":110,
+            "target":267,
             "value":1
         },
         {
             "source":23,
-            "target":39,
+            "target":111,
             "value":1
         },
         {
             "source":23,
-            "target":42,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":36,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":43,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":33,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":40,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":35,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":41,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":38,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":44,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":34,
-            "value":1
-        },
-        {
-            "source":23,
-            "target":37,
+            "target":107,
             "value":1
         },
         {
             "source":30,
-            "target":28,
+            "target":337,
             "value":1
         },
         {
             "source":31,
-            "target":14,
+            "target":345,
             "value":1
         },
         {
@@ -3161,42 +6045,52 @@
         },
         {
             "source":31,
-            "target":196,
-            "value":1
-        },
-        {
-            "source":31,
-            "target":131,
-            "value":1
-        },
-        {
-            "source":31,
-            "target":32,
-            "value":1
-        },
-        {
-            "source":31,
-            "target":181,
-            "value":1
-        },
-        {
-            "source":31,
             "target":191,
             "value":1
         },
         {
             "source":31,
-            "target":201,
+            "target":128,
             "value":1
         },
         {
             "source":31,
-            "target":195,
+            "target":140,
             "value":1
         },
         {
             "source":31,
-            "target":202,
+            "target":193,
+            "value":1
+        },
+        {
+            "source":31,
+            "target":176,
+            "value":1
+        },
+        {
+            "source":31,
+            "target":186,
+            "value":1
+        },
+        {
+            "source":31,
+            "target":369,
+            "value":1
+        },
+        {
+            "source":31,
+            "target":196,
+            "value":1
+        },
+        {
+            "source":31,
+            "target":190,
+            "value":1
+        },
+        {
+            "source":31,
+            "target":197,
             "value":1
         },
         {
@@ -3211,17 +6105,22 @@
         },
         {
             "source":31,
-            "target":215,
+            "target":210,
             "value":1
         },
         {
             "source":31,
-            "target":166,
+            "target":162,
             "value":1
         },
         {
             "source":31,
-            "target":151,
+            "target":148,
+            "value":1
+        },
+        {
+            "source":31,
+            "target":236,
             "value":1
         },
         {
@@ -3255,13 +6154,23 @@
             "value":1
         },
         {
-            "source":39,
-            "target":60,
+            "source":35,
+            "target":400,
             "value":1
         },
         {
             "source":39,
-            "target":50,
+            "target":296,
+            "value":1
+        },
+        {
+            "source":39,
+            "target":305,
+            "value":1
+        },
+        {
+            "source":39,
+            "target":480,
             "value":1
         },
         {
@@ -3311,7 +6220,32 @@
         },
         {
             "source":47,
-            "target":50,
+            "target":369,
+            "value":1
+        },
+        {
+            "source":47,
+            "target":379,
+            "value":1
+        },
+        {
+            "source":47,
+            "target":474,
+            "value":1
+        },
+        {
+            "source":52,
+            "target":372,
+            "value":1
+        },
+        {
+            "source":52,
+            "target":373,
+            "value":1
+        },
+        {
+            "source":53,
+            "target":374,
             "value":1
         },
         {
@@ -3325,83 +6259,353 @@
             "value":1
         },
         {
-            "source":105,
-            "target":97,
+            "source":63,
+            "target":243,
             "value":1
         },
         {
-            "source":151,
-            "target":144,
+            "source":102,
+            "target":95,
             "value":1
         },
         {
-            "source":151,
-            "target":136,
+            "source":148,
+            "target":141,
             "value":1
         },
         {
-            "source":151,
-            "target":185,
+            "source":148,
+            "target":133,
             "value":1
         },
         {
-            "source":151,
-            "target":186,
+            "source":148,
+            "target":180,
             "value":1
         },
         {
-            "source":151,
-            "target":177,
+            "source":148,
+            "target":181,
             "value":1
         },
         {
-            "source":151,
-            "target":217,
+            "source":148,
+            "target":172,
             "value":1
         },
         {
-            "source":151,
-            "target":129,
+            "source":148,
+            "target":212,
             "value":1
         },
         {
-            "source":151,
-            "target":197,
+            "source":148,
+            "target":126,
             "value":1
         },
         {
-            "source":151,
-            "target":228,
+            "source":148,
+            "target":192,
             "value":1
         },
         {
-            "source":151,
-            "target":127,
+            "source":148,
+            "target":223,
             "value":1
         },
         {
-            "source":151,
-            "target":173,
+            "source":148,
+            "target":124,
             "value":1
         },
         {
-            "source":154,
+            "source":148,
             "target":169,
             "value":1
         },
         {
-            "source":176,
-            "target":204,
+            "source":257,
+            "target":345,
             "value":1
         },
         {
-            "source":176,
-            "target":206,
+            "source":257,
+            "target":30,
             "value":1
         },
         {
-            "source":176,
-            "target":205,
+            "source":257,
+            "target":191,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":128,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":140,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":193,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":176,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":186,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":369,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":196,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":190,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":197,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":20,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":29,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":210,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":162,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":148,
+            "value":1
+        },
+        {
+            "source":257,
+            "target":236,
+            "value":1
+        },
+        {
+            "source":258,
+            "target":254,
+            "value":1
+        },
+        {
+            "source":258,
+            "target":495,
+            "value":1
+        },
+        {
+            "source":267,
+            "target":369,
+            "value":1
+        },
+        {
+            "source":267,
+            "target":273,
+            "value":1
+        },
+        {
+            "source":267,
+            "target":277,
+            "value":1
+        },
+        {
+            "source":267,
+            "target":339,
+            "value":1
+        },
+        {
+            "source":267,
+            "target":306,
+            "value":1
+        },
+        {
+            "source":267,
+            "target":293,
+            "value":1
+        },
+        {
+            "source":276,
+            "target":102,
+            "value":1
+        },
+        {
+            "source":303,
+            "target":369,
+            "value":1
+        },
+        {
+            "source":303,
+            "target":273,
+            "value":1
+        },
+        {
+            "source":303,
+            "target":277,
+            "value":1
+        },
+        {
+            "source":303,
+            "target":339,
+            "value":1
+        },
+        {
+            "source":303,
+            "target":306,
+            "value":1
+        },
+        {
+            "source":303,
+            "target":293,
+            "value":1
+        },
+        {
+            "source":339,
+            "target":93,
+            "value":1
+        },
+        {
+            "source":345,
+            "target":424,
+            "value":1
+        },
+        {
+            "source":345,
+            "target":337,
+            "value":1
+        },
+        {
+            "source":345,
+            "target":368,
+            "value":1
+        },
+        {
+            "source":345,
+            "target":111,
+            "value":1
+        },
+        {
+            "source":368,
+            "target":89,
+            "value":1
+        },
+        {
+            "source":368,
+            "target":460,
+            "value":1
+        },
+        {
+            "source":368,
+            "target":0,
+            "value":1
+        },
+        {
+            "source":370,
+            "target":153,
+            "value":1
+        },
+        {
+            "source":416,
+            "target":103,
+            "value":1
+        },
+        {
+            "source":424,
+            "target":368,
+            "value":1
+        },
+        {
+            "source":424,
+            "target":24,
+            "value":1
+        },
+        {
+            "source":424,
+            "target":89,
+            "value":1
+        },
+        {
+            "source":424,
+            "target":300,
+            "value":1
+        },
+        {
+            "source":424,
+            "target":303,
+            "value":1
+        },
+        {
+            "source":424,
+            "target":267,
+            "value":1
+        },
+        {
+            "source":424,
+            "target":111,
+            "value":1
+        },
+        {
+            "source":424,
+            "target":107,
+            "value":1
+        },
+        {
+            "source":490,
+            "target":12,
+            "value":1
+        },
+        {
+            "source":490,
+            "target":7,
+            "value":1
+        },
+        {
+            "source":490,
+            "target":5,
+            "value":1
+        },
+        {
+            "source":490,
+            "target":11,
+            "value":1
+        },
+        {
+            "source":490,
+            "target":9,
+            "value":1
+        },
+        {
+            "source":490,
+            "target":13,
             "value":1
         }
     ]
