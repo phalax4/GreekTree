@@ -3,7 +3,7 @@ from Deity import *
 from Link import *
 from Scrape import Scrape
 import time
-
+import multiprocessing as mp
 class JSON_data:
 	def __init__(self, nodes, links):
 		self.nodes = nodes
@@ -15,7 +15,7 @@ class Write_JSON:
 
 	def write(self):
 		obj = json.dumps(self.obj,default=jdefault,indent=4,separators = (',',':'))
-		with open('data.json', 'a') as f:
+		with open('d3/data.json', 'w') as f:
 			f.write(obj)
 
 # allows Python lists to be JSON encoded
@@ -27,37 +27,42 @@ def jdefault(o):
 if __name__=='__main__':
 	scraper = Scrape()
 	objlist = []
-	t0 = time.time()
-	tlist1 = []
-	tlist2 = []
-	for i in [0,1,2]:
-		t2 = time.time()
-		scraper.extractWikiTables(i,objlist)
-		t3 = time.time()
-		tlist1.append(t3-t2)
-		#print "WikiTable: %f, takes %f"%(i,(t3-t2))
-	t1 = time.time()
-	t4 = time.time()
-	for i in list(range(7)):
-		t6 = time.time()
-		scraper.extractWikiLists(i,objlist)
-		t7 = time.time()
-		tlist2.append(t7-t6)
-		#print "WikiList: %f, takes %f"%(i,(t7-t6))
-	t5 = time.time()
-	c = 0
-	for i in tlist1:
-		print "WikiTable: %d, takes %f seconds"%(c,i)
-		c = c+1
-	c = 0
-	for i in tlist1:
-		print "WikiLists: %d, takes %f seconds"%(c,i)
-		c = c+1
-	print "WikiTables takes: %f" % (t1-t0)
-	print "WikiLists takes: %f" %(t5 - t4)
 
-	for i in objlist:
-		pass
+	t0 = time.time()
+	
+	objlist2 = []
+	output = mp.Manager().list()
+	processes = []
+	#for i in [0,1,2]:
+	#	processes.append(mp.Process(target=scraper.extractWikiTables,args=(i,)))
+	#processes = [mp.Process(target=scraper.extractWikiTables,args=(k,objlist)) for k in range(3)]
+	for i in [0,1,2]:
+		p = mp.Process(target=scraper.extractWikiTables,args=(i,output))
+		processes.append(p)
+		p.start()
+	for p in processes:
+		p.join()
+	print output
+	print len(output)
+	t1 = time.time()
+
+	t2 = time.time()
+	output2 = mp.Manager().list()
+
+	processes1 = [mp.Process(target=scraper.extractWikiLists,args=(i,output2)) for i in range(7)]
+	for p in processes1:
+		p.start()
+	for p in processes1:
+		p.join()
+	#print len(output2)
+	#print len(list(output)+list(output2))
+	objlist = (list(output)+list(output2))
+	t3 = time.time()
+
+	print "WikiTables, takes %f seconds"%(t1-t0)
+
+	print "WikiLists takes %f seconds"%(t3-t2)
+
 	t8 = time.time()
 	m = MakeLinks(objlist)
 	m.makeLinks()

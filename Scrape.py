@@ -79,7 +79,8 @@ class Scrape:
 						ifInfobox = s.extractInfobox()
 						if ifInfobox == -1:
 							s.extractFromParagraph()
-					objlist.append(god)				
+					objlist.append(god)
+					#print len(objlist)				
 	#returns a deity object given soup.find("li") and soup.find("a")			
 	def createDeityObject(self, li, a):
 		if a != None:
