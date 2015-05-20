@@ -71,7 +71,6 @@
     node.each(function(d){ <!-- Iterates through each node by group. Need to stick force.charge funcition in here  -->
         if (d.group === -1) {
             console.log(d)
-
             d3.select(this).classed(d.group, true);
         }else if (d.group === 1){
 

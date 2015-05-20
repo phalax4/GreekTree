@@ -62,15 +62,24 @@ if __name__=='__main__':
 	print "WikiTables, takes %f seconds"%(t1-t0)
 
 	print "WikiLists takes %f seconds"%(t3-t2)
-
+	#for i in objlist:
+	#	for j in objlist:
+	newlist = []
+	for i in objlist:
+		if i not in newlist:
+			newlist.append(i)
+			#print i.name
+	objlist = newlist
+	for i in newlist:
+		print i.name
 	t8 = time.time()
-	m = MakeLinks(objlist)
+	m = MakeLinks(newlist)
 	m.makeLinks()
 	t9 = time.time()
 	print "Making links takes: %f"%(t9 - t8)
 
 	t10 = time.time()
-	s = JSON_data(objlist, m.linklist)
+	s = JSON_data(newlist, m.linklist)
 	writer = Write_JSON(s)
 	writer.write()
 	t11 = time.time()
