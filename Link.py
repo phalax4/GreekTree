@@ -14,14 +14,15 @@ class MakeLinks:
 
 	def find(self, name):
 		for i in range(len(self.objlist)):
-			if self.objlist[i].name == name:
+			if name in self.objlist[i].name:
 				return self.objlist[i]
 
 	def makeLinks(self): 
 		#getting generation numbers
-		#nyx = self.find("Nyx")
-		#nyx.group = 0
-		#self.generations(nyx)
+		chaos = self.find("Chaos")
+		chaos.group = 0
+		chaos.children += ["Erebus", "Nyx"]
+		self.generations(chaos)
 		for i in range(len(self.objlist)):
 			deity = self.objlist[i]
 			#links for children
