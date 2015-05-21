@@ -1,8 +1,8 @@
-#!/usr/bin/python
 import urllib2
 from bs4 import BeautifulSoup, NavigableString
 from Deity import *
 from nltk import word_tokenize
+
 class Scrape:
 	def __init__(self):
 		self.url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures") #open initial link
@@ -19,7 +19,6 @@ class Scrape:
 		soup = BeautifulSoup(content)  #soup contains the Object to access page
 		self.tables = self.soup.findAll("table", {"class" : "wikitable"}) #Grabs the 3 wiki tables: Titans, 12 Gods and Primordial
 		self.lists = self.soup.findAll("div", {"class": "div-col columns column-count column-count-"})
-		#print type(soup)
 		print "Connection Success"
 		
 	def find(self, name, objlist):
@@ -29,7 +28,6 @@ class Scrape:
 		return False
 
 	def extractWikiTables(self,x,objlist): #specify which wiki table to get
-		#print self.tables[]
 		for td in self.tables[x]:
 			soupb = BeautifulSoup(unicode(td))
 			list2 = (soupb.select("p"))
@@ -55,17 +53,17 @@ class Scrape:
 					ty = ""
 				god.typie = ty
 				attribute = ""
-				if(len(list3)==3):     ######Grabs the paragraph blurb for titan and primordial
+				if(len(list3)==3):     ###Grabs the paragraph blurb for titan and primordial
 					#print list3[2]
 					string = (str((list3[2]))[4:])
 					attribute = string[:string.find(".")+1]
-					print attribute
+					#print attribute
 					#print string[:string.find(".")+1]
 					#print list3[2]
 				elif(len(list3)==2):  ###Paragraph for the 12 main deities
 					string = (str((list2[0]))[3:])
 					attribute = string[:string.find(".")+1]
-					print attribute
+					#print attribute
 					#print string[:string.find(".")+1]#[soupb.extract() for i in list2]
 				else:
 					attribute = "NULL"
@@ -79,8 +77,9 @@ class Scrape:
 						ifInfobox = s.extractInfobox()
 						if ifInfobox == -1:
 							s.extractFromParagraph()
-					objlist.append(god)
+						objlist.append(god)
 					#print len(objlist)				
+
 	#returns a deity object given soup.find("li") and soup.find("a")			
 	def createDeityObject(self, li, a):
 		if a != None:
@@ -94,7 +93,7 @@ class Scrape:
 		god = Deity(name,link)
 		return god
 	
-	def extractWikiLists(self, x, objlist): #getting names of all other deities
+	def extractWikiLists(self, x, objlist): #getting names from lists
 		soupb = BeautifulSoup(unicode(self.lists[x]))
 		for ul in soupb.find("div").find_all("ul",recursive=False):
 			for li in (ul.find_all("li")):
@@ -106,21 +105,17 @@ class Scrape:
 				elif x == 1:
 					ty = "Spirit"
 				god.typie = ty
-				
+
 				if not self.find(god.name, objlist):
 					#going into the deity's webpage:
-					if god.link and god.link != "":
-						#print god.link
-						string = god.link
-						s = ScrapeDeity(god,string)
-						#print god.link
+					if god.link:
+						s = ScrapeDeity(god, god.link)
+						print god.link
 						ifInfobox = s.extractInfobox()
 						if ifInfobox == -1:
 							s.extractFromParagraph()
 					objlist.append(god)
-				
-				"""
-				#gets deities in a subcategory
+
 				ull = li.find("ul")
 				if ull:
 					for s in ull.find_all("li",recursive=False):
@@ -130,7 +125,7 @@ class Scrape:
 						else:
 							subname = s.text.encode('utf-8').split(" ")[0]
 						god.sub += [subname]
-				"""
+				
 
 class ScrapeDeity:
 	def __init__(self, deity, link):
@@ -147,20 +142,6 @@ class ScrapeDeity:
 				if ("and " not in x) and ("the " not in x) and (" the" not in x) and (" or" not in x) and (" or" not in x) and (x != "or") and ("None" not in x):
 					return True
 		return False
-
-	# adds the list of names/objects in an infobox category to a Deity object
-	def extractInfoboxList(self, tr, attribute):
-		td = tr.find("td")
-		for thing in td.children:
-			if type(thing) == NavigableString:
-				lst = thing.split(", ")
-				self.deity.__dict__[attribute] += [x for x in lst if self.isWord(x)]
-			else:
-				text = thing.text.encode('utf-8')
-				if self.isWord(text):
-					if text[:4] == "The ":
-						text = text[4:]
-					self.deity.__dict__[attribute] += [text]
 	
 	# searches through infobox
 	def extractInfobox(self):
@@ -176,25 +157,44 @@ class ScrapeDeity:
 						self.extractInfoboxList(tr, "parents")
 		else:
 			return -1;
+
+	# adds the list of names/objects in an infobox category to a Deity object
+	def extractInfoboxList(self, tr, attribute):
+		td = tr.find("td")
+		for thing in td.children:
+			if type(thing) == NavigableString:
+				lst = thing.split(", ")
+				self.deity.__dict__[attribute] += [x for x in lst if self.isWord(x)]
+			else:
+				text = thing.text.encode('utf-8')
+				if self.isWord(text):
+					if text[:4] == "The ":
+						text = text[4:]
+					self.deity.__dict__[attribute] += [text]
+
 	def extractFromParagraph(self):
 		raw = self.soup.get_text()
 		page = self.soup.find_all('p')
-		print "-----------------"
-		for i in page:
-			print i.get_text()
-		print "-----------------"
-		#tokens = word_tokenize(raw)
-		#target = open('gdata', 'w')
-		#target.write(unicode(raw))
-		#target.write('\n')
-		#target.close()
-		#print ".........................................."
-		#print self.deity.name
-		#if str(self.deity.name)=="Iapetus":
-		#	print "----------------"
-		#print tokens
-		#print raw.find("mother of")
-		#print "++++++++++++++++++++++++++++++"
+		for p in page:
+			tokens = word_tokenize(p.text)
+			for i in range(1, len(tokens)):
+				phrase = tokens[i-1] + tokens[i]	#getting two adjacent words
+				phrase = phrase.encode('utf-8')
+				
+				#getting parents of deity
+				parentstrings = ['offspringof', 'sonof', 'sonsof', 'daughterof', 'daughtersof', 'motherwas', 'descendedfrom']
+				j = i 	#counter for getting names
+				if phrase in parentstrings:
+					while j < len(tokens):	#loop through following words
+						if tokens[j].istitle():		#names are capitalized
+							print "parent of: " + self.deity.name + " " +  tokens[j]
+							self.deity.parents += [tokens[j]]	#add to the parents list
+						if tokens[j] in '.;,':
+							break	#end of sentence/phrase
+						j += 1
+			if self.deity.parents != []:
+				break	#stop searching if things have been found
+				
 if __name__=='__main__':#testing purposes
 	scraper = Scrape()
 	#testList1 = scraper.extract12Gods()
