@@ -3,6 +3,10 @@ from bs4 import BeautifulSoup, NavigableString
 from Deity import *
 from nltk import word_tokenize
 
+#TODO
+# look at Aether, infobox list getting, use nltk?
+# get rid of the space after Chaos
+
 class Scrape:
 	def __init__(self):
 		self.url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures") #open initial link
@@ -30,8 +34,6 @@ class Scrape:
 	def extractWikiTables(self,x,objlist): #specify which wiki table to get
 		for td in self.tables[x]:
 			soupb = BeautifulSoup(unicode(td))
-			list2 = (soupb.select("p"))
-			list3 = (soupb.select("td"))
 			a = soupb.find("a")
 			if x == 0:
 				b = soupb.find("b")
@@ -40,45 +42,28 @@ class Scrape:
 				link = self.mainUrl + a.get('href')
 				name = a.get('title')
 				if name.find("(")!= -1: #parse out (mythology) substring
-					name = name[0:name.index("(")]
+					name = name[0:(name.index("(")-1)]
 				god = Deity(name,link)
+				ty = ""
+				attr = ""	
 				if x == 0:
 					ty = "Immortal"
 				elif x == 1:
 					ty = "Primeval"
 				elif x == 2:
-					group = 1
 					ty = "Immortal"
-				else:
-					ty = ""
+					attr = "Titan"		
+
 				god.typie = ty
-				attribute = ""
-				if(len(list3)==3):     ###Grabs the paragraph blurb for titan and primordial
-					#print list3[2]
-					string = (str((list3[2]))[4:])
-					attribute = string[:string.find(".")+1]
-					#print attribute
-					#print string[:string.find(".")+1]
-					#print list3[2]
-				elif(len(list3)==2):  ###Paragraph for the 12 main deities
-					string = (str((list2[0]))[3:])
-					attribute = string[:string.find(".")+1]
-					#print attribute
-					#print string[:string.find(".")+1]#[soupb.extract() for i in list2]
-				else:
-					attribute = "NULL"
-				god.attribute = attribute
-				#checking if it is already in the list
+				god.attribute = attr
+
 				if not self.find(god.name, objlist):
 					#going into the deity's webpage
 					if god.link:
 						s = ScrapeDeity(god, god.link)
-						#print god.link
-						ifInfobox = s.extractInfobox()
-						if ifInfobox == -1:
-							s.extractFromParagraph()
-						objlist.append(god)
-					#print len(objlist)				
+						print god.link
+						s.extractInfobox()
+					objlist.append(god)
 
 	#returns a deity object given soup.find("li") and soup.find("a")			
 	def createDeityObject(self, li, a):
@@ -187,7 +172,7 @@ class ScrapeDeity:
 				if phrase in parentstrings:
 					while j < len(tokens):	#loop through following words
 						if tokens[j].istitle():		#names are capitalized
-							print "parent of: " + self.deity.name + " " +  tokens[j]
+							#print "parent of: " + self.deity.name + " " +  tokens[j]
 							self.deity.parents += [tokens[j]]	#add to the parents list
 						if tokens[j] in '.;,':
 							break	#end of sentence/phrase
