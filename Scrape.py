@@ -3,10 +3,6 @@ from bs4 import BeautifulSoup, NavigableString
 from Deity import *
 from nltk import word_tokenize
 
-#TODO
-# look at Aether, infobox list getting, use nltk?
-# get rid of the space after Chaos
-
 class Scrape:
 	def __init__(self):
 		self.url = urllib2.urlopen("http://en.wikipedia.org/wiki/List_of_Greek_mythological_figures") #open initial link
@@ -58,8 +54,7 @@ class Scrape:
 				god.attribute = attr
 
 				if not self.find(god.name, objlist):
-					#going into the deity's webpage
-					if god.link:
+					if god.link: #going into the deity's webpage
 						s = ScrapeDeity(god, god.link)
 						print god.link
 						s.extractInfobox()
@@ -91,16 +86,7 @@ class Scrape:
 					ty = "Spirit"
 				god.typie = ty
 
-				if not self.find(god.name, objlist):
-					#going into the deity's webpage:
-					if god.link:
-						s = ScrapeDeity(god, god.link)
-						print god.link
-						ifInfobox = s.extractInfobox()
-						if ifInfobox == -1:
-							s.extractFromParagraph()
-					objlist.append(god)
-
+				#finding subgods
 				ull = li.find("ul")
 				if ull:
 					for s in ull.find_all("li",recursive=False):
@@ -109,8 +95,17 @@ class Scrape:
 							subname = suba.text.encode('utf-8')
 						else:
 							subname = s.text.encode('utf-8').split(" ")[0]
-						god.sub += [subname]
-				
+						god.sub += [subname]	
+
+				if not self.find(god.name, objlist):
+					#going into the deity's webpage:
+					if god.link:
+						s = ScrapeDeity(god, god.link)
+						print god.link
+						ifInfobox = s.extractInfobox()
+						if ifInfobox == -1:
+							s.extractFromParagraph()
+					objlist.append(god)			
 
 class ScrapeDeity:
 	def __init__(self, deity, link):
