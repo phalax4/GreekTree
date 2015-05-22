@@ -43,20 +43,18 @@
 		  .links(data.links)
 		  .start();
     
-	  var node = svg.selectAll("circle.node")
+    var link = svg.selectAll("line.link")
+			.data(data.links)
+			.enter()
+			.insert("line")
+			.attr("stroke", function(d) { return link_color(d.value); })
+			.attr("stroke-width", function(d) { return link_width(d.value); })
+			.attr("class", "link");
+      var node = svg.selectAll("circle.node")
 			.data(data.nodes)
 			.enter()
 			.append("g")
 			.call(force.drag);
-    
-    var link = svg.selectAll("line.link")
-			.data(data.links)
-			.enter()
-			.append("line")
-			.attr("stroke", function(d) { return link_color(d.value); })
-			.attr("stroke-width", function(d) { return link_width(d.value); })
-			.attr("class", "link");
-    
     node.append("circle")
 	    .attr("r", function(d) { return node_size(d.group); })
 	  	.attr("fill", function(d) { return node_color(d.typie); })
@@ -73,7 +71,7 @@
             console.log(d)
             d3.select(this).classed(d.group, true);
         }else if (d.group === 1){
-
+        	d.fixed
         }else if(d.group === 2){
 
         }else{
