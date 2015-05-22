@@ -1,127 +1,216 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<title>Force-Directed Graph</title>
-<style>
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style type="text/css">
+   circle.node {
+    stroke: #000;
+    opacity: 0.7;
+   }
+   line.link {
+    stroke-opacity: 0.6;
+   }
+   .label {
+    font-family: sans-serif;
+    font-size: 11px;
+    fill: red;
+   }
 
-.node {
-  cursor: pointer;
-  stroke: #3182bd;
-  stroke-width: 1.5px;
+node.node:not(:hover) .nodetext {
+  display: none;
 }
-
-.link {
-  fill: none;
-  stroke: #9ecae1;
-  stroke-width: 1.5px;
-}
-
-</style>
-<body>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-
-var width = 960,
-    height = 500,
-    root;
-
-var force = d3.layout.force()
-    .size([width, height])
-    .on("tick", tick);
-
-var svg = d3.select("body").append("svg")
+  </style>
+  <title>Greek Tree</title>
+  <script src="http://www.d3plus.org/js/d3.js"></script>
+  <script src="http://www.d3plus.org/js/d3plus.js"></script>
+ </head>
+ 
+ <body>
+  <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var width = 1200;
+    var height = 1200;
+   var node;
+    var svg = d3.select("body")
+    .append("svg")
     .attr("width", width)
     .attr("height", height);
-
-var link = svg.selectAll(".link"),
-    node = svg.selectAll(".node");
-
-d3.json("data.json", function(json) {
-  root = json;
-  update();
-});
-
-function update() {
-  var nodes = flatten(root),
-      links = d3.layout.tree().links(nodes);
-
-  // Restart the force layout.
-  force
-      .nodes(nodes)
-      .links(links)
+    
+  var force = d3.layout.force()
+    .charge(-100)
+    .linkDistance(70)
+    .size([width, height]);
+   
+  d3.json("data.json", function(data) {
+    force.nodes(data.nodes)
+      .links(data.links)
       .start();
+    
+    var link = svg.selectAll("line.link")
+      .data(data.links)
+      .enter()
+      .insert("line")
+      .attr("stroke", function(d) { return link_color(d.value); })
+      .attr("stroke-width", function(d) { return link_width(d.value); })
+      .attr("class", "link");
 
-  // Update the links…
-  link = link.data(links, function(d) { return d.target.id; });
-
-  // Exit any old links.
-  link.exit().remove();
-
-  // Enter any new links.
-  link.enter().insert("line", ".node")
-      .attr("class", "link")
-      .attr("x1", function(d) { return d.source.x; })
-      .attr("y1", function(d) { return d.source.y; })
-      .attr("x2", function(d) { return d.target.x; })
-      .attr("y2", function(d) { return d.target.y; });
-
-  // Update the nodes…
-  node = node.data(nodes, function(d) { return d.id; }).style("fill", color);
-
-  // Exit any old nodes.
-  node.exit().remove();
-
-  // Enter any new nodes.
-  node.enter().append("circle")
-      .attr("class", "node")
-      .attr("cx", function(d) { return d.x; })
-      .attr("cy", function(d) { return d.y; })
-      .attr("r", function(d) { return Math.sqrt(d.size) / 10 || 4.5; })
-      .style("fill", color)
-      .on("click", click)
+       node = svg.selectAll("circle.node")
+      .data(data.nodes)
+      .enter()
+      .append("g")
       .call(force.drag);
-}
 
-function tick() {
-  link.attr("x1", function(d) { return d.source.x; })
+    node.append("circle")
+      .attr("r", function(d) { return node_size(d.group); })
+      .attr("fill", function(d) { return node_color(d.typie); })
+      .attr("stroke-width", function(d) { return node_stroke(d.typie); })
+      .attr("class", "node").on("mouseover", mouseover)
+           .on("mouseout", mouseout);
+     
+   
+    
+    node.each(function(d){ <!-- Iterates through each node by group. Need to stick force.charge funcition in here  -->
+        if (d.group === -1) {
+           // console.log(d);
+            d3.select(this).classed(d.group, true);
+        }else if (d.group === 1){
+          d.fixed
+          console.log(d.children.length);
+        force = force.charge(-200); 
+        force.start()    
+        }else if(d.group === 2){
+
+        }else{
+          force = force.charge(-300);
+          force.start();
+        }
+    });
+  force.on("tick", function(e) {
+  var q = d3.geom.quadtree(node),
+      i = 0,
+      n = node.length;
+
+  while (++i < n) q.visit(collide(node[i]));
+
+  
+     link.attr("x1", function(d) { return d.source.x; })
       .attr("y1", function(d) { return d.source.y; })
       .attr("x2", function(d) { return d.target.x; })
       .attr("y2", function(d) { return d.target.y; });
-
-  node.attr("cx", function(d) { return d.x; })
+     node.attr("cx", function(d) { return d.x; })
       .attr("cy", function(d) { return d.y; });
-}
+     d3.selectAll("circle")
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
+     d3.selectAll("text")
+      .attr("x", function(d) { return d.x; })
+      .attr("y", function(d) { return d.y; });
+    });
 
-// Color leaf nodes orange, and packages white or blue.
-function color(d) {
-  return d._children ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
-}
-
-// Toggle children on click.
-function click(d) {
-  if (!d3.event.defaultPrevented) {
-    if (d.children) {
-      d._children = d.children;
-      d.children = null;
-    } else {
-      d.children = d._children;
-      d._children = null;
+   });
+   
+  function link_color(c) {
+    switch(c) {
+      case 1:
+        return "red";
+      case 2:
+        return "#ddd";
+      default:
+        return "#000";
     }
-    update();
-  }
+  };
+
+      function link_width(value) {
+        switch(value) {
+          case 1:
+            return 1;
+          case 2:
+            return 3;
+          default:
+            return 1;
+        }
+      };
+
+  function node_size(gr) {
+    if (gr <= 0) {
+      return 7;
+    } else {
+      return 7;
+    }
+  };
+
+  function node_color(type) {
+    switch(type) {
+      case "Primeval":
+        return "Indigo";
+      case "Immortal":
+        return "GoldenRod";
+      case "Giant":
+        return "DarkCyan";
+      case "Category":
+        return "None";
+      default:
+        return "#ddd";
+    }
+  };
+
+  function node_stroke(type) {
+    if (type == "Category") {
+      return "2";
+    } else {
+      return "0";
+    }
+  };
+
+   //Attempting to display name of the node above the node when I mouse over the node
+
+   function mouseover(d) {
+       d3.select(this).transition()
+           .duration(750)
+           //.attr("r", function (d) {return d.size + 10;});
+
+       // locate node and append text; add class to faciliate deletion
+       node.filter(function (o) {return o.index === d.index;})
+           .append("text")
+           .attr("class", "nodetext")
+           .text(d.name)
+   }
+
+   //Will also need to make the text disappear after I move the mouse off of the node
+
+   function mouseout(d) {
+       d3.select(this).transition()
+           .duration(750)
+           //.attr("r", function (d) {return d.size;});
+       
+       // delete text based on class
+       d3.selectAll(".nodetext").remove();
+   }
+function collide(node) {
+  var r = node.radius + 16,
+      nx1 = node.x - r,
+      nx2 = node.x + r,
+      ny1 = node.y - r,
+      ny2 = node.y + r;
+  return function(quad, x1, y1, x2, y2) {
+    if (quad.point && (quad.point !== node)) {
+      var x = node.x - quad.point.x,
+          y = node.y - quad.point.y,
+          l = Math.sqrt(x * x + y * y),
+          r = node.radius + quad.point.radius;
+      if (l < r) {
+        l = (l - r) / l * .5;
+        node.x -= x *= l;
+        node.y -= y *= l;
+        quad.point.x += x;
+        quad.point.y += y;
+      }
+    }
+    return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+  };
 }
-
-// Returns a list of all nodes under the root.
-function flatten(root) {
-  var nodes = [], i = 0;
-
-  function recurse(node) {
-    if (node.children) node.children.forEach(recurse);
-    if (!node.id) node.id = ++i;
-    nodes.push(node);
-  }
-
-  recurse(root);
-  return nodes;
-}
-
-</script>
+     
+  </script>
+ </body>
+</html>
